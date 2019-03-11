@@ -62,10 +62,14 @@ and make them more accessible, so we appreciate suggestions on which new dataset
 
 ## 2. Getting started with images
 
-1. Clear the script by selecting "Clear script" from the Reset button dropdown menu.
-2. Search for “elevation” and click on the SRTM Digital Elevation Data 30m result to show the dataset description.
-3. Click on Import, which moves the variable to the Imports section at the top of your script. Rename the default variable name "image" to be "srtm".
-4. Add the image object to the map with the script:
+1. Navigate to Darwin and zoom in using the mouse wheel.
+![Zoom to Darwin](navdarwin.png)
+
+
+2. Clear the script by selecting "Clear script" from the Reset button dropdown menu.
+3. Search for “elevation” and click on the SRTM Digital Elevation Data 30m result to show the dataset description.
+4. Click on Import, which moves the variable to the Imports section at the top of your script. Rename the default variable name "image" to be "srtm".
+5. Add the image object to the map with the script:
 
 ```JavaScript
 print(srtm);
