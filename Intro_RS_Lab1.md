@@ -1,4 +1,4 @@
-![Shaun Levick](Gears_logo_text.PNG)
+![Shaun Levick](GEARS_logo_text.png)
 GEARS - Geospatial Engineering and Remote Sensing lab - https://www.gears-lab.com
 
 # Introduction to Remote Sensing of the Environment
@@ -31,7 +31,7 @@ The objective of this lab is to give you an introduction to the Google Earth Eng
 
 ## 1. The Earth Engine code editor
 
-![Figure 1. The Google Earth Engine environment](gee_editor.PNG)
+![Figure 1. The Google Earth Engine environment](gee_editor.png)
 
 
 1. Editor Panel
