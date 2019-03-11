@@ -1,4 +1,4 @@
-![Shaun Levick](GEARS_logo_text.png)
+![Shaun Levick](Logo3.png)
 GEARS - Geospatial Engineering and Remote Sensing lab - https://www.gears-lab.com
 
 # Introduction to Remote Sensing of the Environment
