@@ -16,11 +16,11 @@ Lab 1 - Getting started with Google Earth Engine
 
 Completion of this lab exercise requires use of the Google Chrome browser and a Google Earth Engine account. If you have not yet signed up - please do so now:
 
-<https://signup.earthengine.google.com/>
+[Earth Engine account registration](https://signup.earthengine.google.com/)
 
 Google Earth Engine uses the JavaScript programming language. We will cover the very basics of this language during this course. If you would like more detail you can read through the introduction provided here:
 
-[https://developers.google.com/earth-engine/tutorial\\\_js\\\_01](https://developers.google.com/earth-engine/tutorial\_js\_01)
+[JavaScript background](https://developers.google.com/earth-engine/tutorial\_js\_01)
 
 ------------------------------------------------------------------------
 
@@ -58,7 +58,6 @@ The objective of this lab is to give you an introduction to the Google Earth Eng
 and make them more accessible, so we appreciate suggestions on which new datasets we should ingest into the Earth Engine public archive.
 
 ---------
-
 
 ## 2. Getting started with images
 
@@ -116,7 +115,7 @@ Map.addLayer(srtm, {min: 0, max: 300}, 'Elevation above sea level');
 ```
 ![Figure 10. Rename title](title2srtm.png)
 
-10. Now the last step for today is to save your code, however before doing that it is good prctice to add a some comment lines to your code reminding you of what you did an why. We add these with two forward slashes // :
+10. Now the last step for today is to save your code, however before doing that it is good practice to add a some comment lines to your code reminding you of what you did and why. We add these with two forward slashes // :
 
 ```Javascript
 // Print data details to console
@@ -131,16 +130,14 @@ Map.addLayer(srtm, {min: 0, max: 300})
 // Add the data again, with value ranges, and a useful title for teh Layer tab
 Map.addLayer(srtm, {min: 0, max: 300}, 'Elevation above sea level');
 ```
-
 ![Figure 11. Comment script](commentsrtm.png)
 
 11. The final step is then to save you script by clicking "Save". It will be saved in your private repository, and will be accessible the next time you log in to Earth Engine.
-
 ![Figure 12. Comment script](savesrtm.png)
 
 -------
 ### Thank you
 
-I hope you found that useful. A recorded video of this tutorial can be found on my YouTube Channel and at https://www.gears-lab.com
+I hope you found that useful. A recorded video of this tutorial can be found on my YouTube Channel's [Introduction to Remote Sensing of the Environment Playlist](https://www.youtube.com/playlist?list=PLf6lu3bePWHDi3-lrSqiyInMGQXM34TSV) and on my lab website [GEARS](https://www.gears-lab.com).
 
 ------
