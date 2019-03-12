@@ -14,7 +14,7 @@ Lab 1 - Getting started with Google Earth Engine
 ### Prerequisites
 -------------
 
-Completion of this lab exercise requires use of the Google Chrome browser and a Google Earth Engine account. If you have not yet signed up - please do so now:
+Completion of this lab exercise requires use of the Google Chrome browser and a Google Earth Engine account. If you have not yet signed up - please do so now in a new tab:
 
 [Earth Engine account registration](https://signup.earthengine.google.com/)
 
@@ -147,6 +147,7 @@ Map.addLayer(srtm, {min: 0, max: 300}, 'Elevation above sea level');
 -------
 ### Thank you
 
-I hope you found that useful. A recorded video of this tutorial can be found on my YouTube Channel's [Introduction to Remote Sensing of the Environment Playlist](https://www.youtube.com/playlist?list=PLf6lu3bePWHDi3-lrSqiyInMGQXM34TSV) and on my lab website [GEARS](https://www.gears-lab.com){:target="_blank"}.
+I hope you found that useful. A recorded video of this tutorial can be found on my YouTube Channel's [Introduction to Remote Sensing of the Environment Playlist](https://www.youtube.com/playlist?list=PLf6lu3bePWHDi3-lrSqiyInMGQXM34TSV) and on my lab website [GEARS](https://www.gears-lab.com).
 
+Kind regards, Shaun R Levick
 ------
