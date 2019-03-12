@@ -27,7 +27,7 @@ Google Earth Engine uses the JavaScript programming language. We will cover the 
 ### Objective
 ---------
 
-The objective of this lab is to give you an introduction to the Google Earth Engine processing environment. By the end of this exercise you will be able to search, find and visualize a broad range of remotely sensed datasets.
+The objective of this lab is to give you an introduction to the Google Earth Engine processing environment. By the end of this exercise you will be able to search, find and visualize a broad range of remotely sensed datasets. We will start with singleband imagery - elevation data from the SRTM mission.
 
 ## 1. The Earth Engine code editor
 
@@ -63,66 +63,84 @@ and make them more accessible, so we appreciate suggestions on which new dataset
 ## 2. Getting started with images
 
 1. Navigate to Darwin and zoom in using the mouse wheel.
-![Zoom to Darwin](navdarwin.png)
+![Figure 2. Zoom to Darwin](navdarwin.png)
 
 
-2. Clear the script by selecting "Clear script" from the Reset button dropdown menu.
+2. Clear the script workspace by selecting "Clear script" from the Reset button dropdown menu.
+![Figure 3. Clear script](clearscript.png)
+
 3. Search for “elevation” and click on the SRTM Digital Elevation Data 30m result to show the dataset description.
-4. Click on Import, which moves the variable to the Imports section at the top of your script. Rename the default variable name "image" to be "srtm".
-5. Add the image object to the map with the script:
+![Figure 4. Search for elevation data](elevsearch.png)
+
+4. View the information on the dataset, and then click on Import, which moves the variable to the Imports section at the top of your script.
+![Figure 4. View elevation datasource and import](importsrtm.png)
+
+5. Rename the default variable name "image" to be "srtm".
+![Figure 5. Rename image](renamesrtm.png)
+
+6. Add the image object to the console by coping the script below into the code editor, and click "run" :
 
 ```JavaScript
 print(srtm);
 ```
+![Figure 6. Print SRTM](printsrtm.png)
 
-5. Browse through the information that was printed. Open the “bands” section to show the one band named “elevation”. Note that all this same information is automatically available for all variables in the Imports section.
-6. Use the Map.addLayer() method to add the image to the interactive map. We will start simple, without using any of the optional parameters.
+
+7. Browse through the information that was printed to the console. Open the “bands” section to show the one band named “elevation”. Note that all this same information is automatically available for all variables in the Imports section.
+![Figure 7. SRTM in console](bandssrtm.png)
+
+
+8. Use the Map.addLayer() method to add the image to the interactive map. We will start simple, without using any of the optional parameters.
 
 ```JavaScript
 Map.addLayer(srtm);
 ```
 
 The displayed map will look pretty flat grey, because the default visualization parameters map the full 16­bit range of the data onto the black–white range, but the elevation range is much smaller than that in any particular location. We’ll fix it in a moment.
+![Figure 8. Map SRTM](mapsrtm.png)
 
-7. Select the Inspector tab. Then click on a few points on the map to get a feel for the elevation in this area. Finally, set visualization parameters:
+7. Select the Inspector tab. Then click on a few points on the map to get a feel for the elevation range in this area.
+![Figure 8. Inspect SRTM](inspecsrtm.png)
 
-```JavaScript
-Map.addLayer(srtm, {min: 0, max: 1000});
-```
-
-----------
-
-## 4. Applying a computation to an image
-
-1. Pan over to the Kakadu National Park region, where there are some nice elevation differences.
-2. Next add a simple computation, for example a threshold on elevation.
-
-```JavaScript    
-      var high = srtm.gt(200);
-      Map.addLayer(high, {}, 'above 200m');
-```
-
-3. Do another computation to compute slope from the elevation data and display it on the map as a separate layer. Also add a third parameter to the addLayer() method, which names the layer.
+8. Now you can set some more appropriate visualization parameters by adjusting the code as follows (units are in meters above sea level):
 
 ```JavaScript
-var slope = ee.Terrain.slope(srtm);
-Map.addLayer(slope, {min: 0, max: 60}, 'slope');
+Map.addLayer(srtm, {min: 0, max: 300});
 ```
+![Figure 9. Visualise SRTM](vissrtm.png)
 
-4. Layers added to the map will have default names like "Layer 1", "Layer 2", etc. To improve the readability, give each layer a human­readable name.
+9. You will now be able to see variation in elevation range with low values in black and highest points in white. Layers added to the map will have default names like "Layer 1", "Layer 2", etc. To improve the readability, we can give each layer a human­-readable name, by adding a title with the syntax in the following code. Don't forget to click run.
 
 ```JavaScript
-var slope = ee.Terrain.slope(srtm);
-Map.addLayer(srtm, {min: 0, max: 1000}, 'DEM');
-Map.addLayer(slope, {min: 0, max: 60}, 'slope');
+Map.addLayer(srtm, {min: 0, max: 300}, 'Elevation above sea level');
 ```
+![Figure 10. Rename title](title2srtm.png)
+
+10. Now the last step for today is to save your code, however before doing that it is good prctice to add a some comment lines to your code reminding you of what you did an why. We add these with two forward slashes // :
+
+```Javascript
+// Print data details to console
+print(srtm);
+
+// Add the SRTM data to the interactive map
+Map.addLayer(srtm)
+
+// Add the data again, but with rescrited value ranges for better visualisation
+Map.addLayer(srtm, {min: 0, max: 300})
+
+// Add the data again, with value ranges, and a useful title for teh Layer tab
+Map.addLayer(srtm, {min: 0, max: 300}, 'Elevation above sea level');
+```
+
+![Figure 11. Comment script](commentsrtm.png)
+
+11. The final step is then to save you script by clicking "Save". It will be saved in your private repository, and will be accessible the next time you log in to Earth Engine.
+
+![Figure 12. Comment script](savesrtm.png)
+
 -------
-### Things to try:
+### Thank you
 
-- Search for a specific location
-- Use the inspector to estimate the value range
-- Adjust the visualization parameters
-- Look at the documentation tab (i.e. Map.addLayer)
-- Try the context­ specific help (Ctrl­ space)
+I hope you found that useful. A recorded video of this tutorial can be found on my YouTube Channel and at https://www.gears-lab.com
 
 ------
