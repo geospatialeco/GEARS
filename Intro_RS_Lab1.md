@@ -140,16 +140,28 @@ Map.addLayer(srtm, {min: 0, max: 300}, 'Elevation above sea level');
 ```
 ![Figure 11. Comment script](commentsrtm.png)
 
-11. The final step is then to save you script by clicking "Save". It will be saved in your private repository, and will be accessible the next time you log in to Earth Engine.
+11. The next step is then to save you script by clicking "Save". It will be saved in your private repository, and will be accessible the next time you log in to Earth Engine.
 
 ![Figure 12. Comment script](savesrtm.png)
 
-12. If you would like to experiment with different colour combinations,. you can play with colour palettes as per the example below:
+12. If you would like to experiment with different colour combinations, you can play with colour palettes as per the example below:
 
 ```Javascript
 Map.addLayer(srtm, {min: 0, max: 300, palette: ['blue', 'red']}, 'Elevation above sea level');
 ```
+13. For better visualisation we can create a hillshade view of the elevation data.
 
+```JavaScript
+var hillshade = ee.Terrain.hillshade(srtm);
+Map.addLayer(hillshade, {min: 150, max:255}, 'Hillshade');
+```
+
+14. Slope works in a similar way:
+
+```javascript
+var slope = ee.Terrain.slope(srtm);
+Map.addLayer(slope, {min: 0, max: 20}, 'Slope')
+```
 -------
 ### Thank you
 
