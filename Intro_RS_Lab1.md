@@ -162,6 +162,8 @@ Map.addLayer(hillshade, {min: 150, max:255}, 'Hillshade');
 var slope = ee.Terrain.slope(srtm);
 Map.addLayer(slope, {min: 0, max: 20}, 'Slope')
 ```
+
+15. Remember you can use the Layer transparency options to create draped images for colourised hillshades.
 -------
 ### Thank you
 
