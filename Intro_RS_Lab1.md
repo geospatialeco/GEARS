@@ -144,7 +144,7 @@ Map.addLayer(srtm, {min: 0, max: 300}, 'Elevation above sea level');
 
 ![Figure 12. Comment script](savesrtm.png)
 
-12. If you would like to experiment with differnt colour combinations,. you can play with clours palettes as per the example below:
+12. If you would like to experiment with different colour combinations,. you can play with colour palettes as per the example below:
 
 ```Javascript
 Map.addLayer(srtm, {min: 0, max: 300, palette: ['blue', 'red']}, 'Elevation above sea level');
