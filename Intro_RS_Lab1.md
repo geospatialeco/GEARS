@@ -62,19 +62,24 @@ and make them more accessible, so we appreciate suggestions on which new dataset
 ## 2. Getting started with images
 
 1. Navigate to Darwin and zoom in using the mouse wheel.
+
 ![Figure 2. Zoom to Darwin](navdarwin.png)
 
 
 2. Clear the script workspace by selecting "Clear script" from the Reset button dropdown menu.
+
 ![Figure 3. Clear script](clearscript.png)
 
 3. Search for “elevation” and click on the SRTM Digital Elevation Data 30m result to show the dataset description.
+
 ![Figure 4. Search for elevation data](elevsearch.png)
 
 4. View the information on the dataset, and then click on Import, which moves the variable to the Imports section at the top of your script.
+
 ![Figure 4. View elevation datasource and import](importsrtm.png)
 
 5. Rename the default variable name "image" to be "srtm".
+
 ![Figure 5. Rename image](renamesrtm.png)
 
 6. Add the image object to the console by coping the script below into the code editor, and click "run" :
@@ -86,6 +91,7 @@ print(srtm);
 
 
 7. Browse through the information that was printed to the console. Open the “bands” section to show the one band named “elevation”. Note that all this same information is automatically available for all variables in the Imports section.
+
 ![Figure 7. SRTM in console](bandssrtm.png)
 
 
@@ -96,9 +102,11 @@ Map.addLayer(srtm);
 ```
 
 The displayed map will look pretty flat grey, because the default visualization parameters map the full 16­bit range of the data onto the black–white range, but the elevation range is much smaller than that in any particular location. We’ll fix it in a moment.
+
 ![Figure 8. Map SRTM](mapsrtm.png)
 
 7. Select the Inspector tab. Then click on a few points on the map to get a feel for the elevation range in this area.
+
 ![Figure 8. Inspect SRTM](inspecsrtm.png)
 
 8. Now you can set some more appropriate visualization parameters by adjusting the code as follows (units are in meters above sea level):
@@ -133,6 +141,7 @@ Map.addLayer(srtm, {min: 0, max: 300}, 'Elevation above sea level');
 ![Figure 11. Comment script](commentsrtm.png)
 
 11. The final step is then to save you script by clicking "Save". It will be saved in your private repository, and will be accessible the next time you log in to Earth Engine.
+
 ![Figure 12. Comment script](savesrtm.png)
 
 -------
