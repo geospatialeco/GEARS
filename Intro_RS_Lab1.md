@@ -18,6 +18,9 @@ Completion of this lab exercise requires use of the Google Chrome browser and a 
 
 [Earth Engine account registration](https://signup.earthengine.google.com/)
 
+Once registered you can access the Earth Engine environment here:
+https://code.earthengine.google.com
+
 Google Earth Engine uses the JavaScript programming language. We will cover the very basics of this language during this course. If you would like more detail you can read through the introduction provided here:
 
 [JavaScript background](https://developers.google.com/earth-engine/tutorial\_js\_01)
@@ -27,7 +30,7 @@ Google Earth Engine uses the JavaScript programming language. We will cover the 
 ### Objective
 ---------
 
-The objective of this lab is to give you an introduction to the Google Earth Engine processing environment. By the end of this exercise you will be able to search, find and visualize a broad range of remotely sensed datasets. We will start with singleband imagery - elevation data from the SRTM mission.
+The objective of this lab is to give you an introduction to the Google Earth Engine processing environment. By the end of this exercise you will be able to search, find and visualise a broad range of remotely sensed datasets. We will start with single-band imagery - elevation data from the SRTM mission.
 
 ## 1. The Earth Engine code editor
 
@@ -147,14 +150,20 @@ Map.addLayer(srtm, {min: 0, max: 300}, 'Elevation above sea level');
 12. If you would like to experiment with different colour combinations, you can play with colour palettes as per the example below:
 
 ```Javascript
-Map.addLayer(srtm, {min: 0, max: 300, palette: ['blue', 'red']}, 'Elevation above sea level');
+Map.addLayer(srtm, {min: 0, max: 300, palette: ['blue', 'yellow', 'red']}, 'Elevation above sea level');
 ```
-13. For better visualisation we can create a hillshade view of the elevation data.
+
+![Figure 13. Colour scale elevation](coloursrtm.png)
+
+13. For better visualisation we can create a hillshade view of the elevation data. Remember you can use the Layer transparency options to create draped images for colourised hillshades.
 
 ```JavaScript
 var hillshade = ee.Terrain.hillshade(srtm);
 Map.addLayer(hillshade, {min: 150, max:255}, 'Hillshade');
 ```
+
+![Figure 14. Hillshade view](hillsrtm.png)
+
 
 14. Slope works in a similar way:
 
@@ -163,7 +172,7 @@ var slope = ee.Terrain.slope(srtm);
 Map.addLayer(slope, {min: 0, max: 20}, 'Slope')
 ```
 
-15. Remember you can use the Layer transparency options to create draped images for colourised hillshades.
+![Figure 15. Slope map](slopesrtm.png)
 -------
 ### Thank you
 
