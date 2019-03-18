@@ -2,7 +2,7 @@
 GEARS - Geospatial Engineering and Remote Sensing lab - https://www.gears-lab.com
 
 # Introduction to Remote Sensing of the Environment
-Lab 2 - Understanding band combinations and spectral response curves
+Lab 2 - Understanding band combinations and image visualisations
 --------------
 
 ### Acknowledgments
@@ -46,7 +46,7 @@ Map.setCenter(132.5685, -12.6312, 8);
 
 ![Figure 1. Navigate to Kakadu](L2_kakadu.png)
 
-3. Now that we are in the right place, let's choose a Sentinel-2 image using the code below. Copy and paste into the Code Editor and click "Run". Copernicus refers to the satellite mission, S2 is short for Sentinel-2, and the long number 20180422T012719_20180422T012714_T52LHM refers to a specific image, defined by a date, time and a path and row of the satellite's orbit.
+3. Now that we are in the right place, let's choose a Sentinel-2 image using the code below. Copy and paste into the Code Editor and click "Run". Copernicus refers to the satellite mission, S2 is short for Sentinel-2, and the long number 20180422T012719_20180422T012714_T52LHM refers to a specific image, defined by a date, time and a path and row of the satellite's orbit. I have chosen a single image for the purposes of this lab, but we will cover searching for images for specific areas and dates at a later stage.
 
 ```JavaScript
 // Select a specific Sentinel-2 image from the archive
@@ -120,6 +120,40 @@ Map.addLayer(sent2,{bands:['B8','B4','B3'], min:0, max:3000}, "False-colour");
 
 ![Figure 10. Flip between layers](L2_colour2.gif)
 
+15. To really build your understanding of how different wavelengths interact with surfaces, we are now going to load individual bands sequentially, from shorter to longer wavelengths.
+
+```JavaScript
+// Add Band 1 to map
+Map.addLayer(sent2,{bands:['B1'], min:0, max:3000}, "B1");
+```
+
+
+------
+### Practical exercise
+
+1. Load up another Sentinel-2 image for the same area of interest. The code below contains the image identifier for an image collected in August 2018.
+
+```JavaScript
+// Select a specific Sentinel-2 image from the archive
+var sent2dry = ee.Image("COPERNICUS/S2/20180810T012709_20180810T012711_T52LHM");
+```
+2. Visualise this image in true-colour and false-colour.
+
+3. Compare the August image with the one from April. What has changed and why?
+
+4. So far we have only explored two visualisation options (true-colour and false-colour), but there are many more possible RGB combinations:
+    - Natural colour: 4 3 2
+    - False colour infrared: 8 4 3
+    - False colour urban: 12 11 4
+    - Agriculture: 11 8 2
+    - Atmospheric penetration: 12 11 8a
+    - Healthy vegetation: 8 11 2
+    - Land/Water: 8 11 4
+    - Natural colours with atmospheric removal: 12 8 3
+    - Shortwave infrared: 12 8 4
+    - Vegetation analysis: 11 8 4
+    
+5. Experiment with the combinations listed above and think about why we might want to use them.
 
 -------
 ### Thank you
