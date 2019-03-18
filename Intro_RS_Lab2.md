@@ -106,6 +106,7 @@ Map.addLayer(sent2,{bands:['B4','B3','B2']}, "Black");
 // Add RGB composite to map, with parameters defines
 Map.addLayer(sent2,{bands:['B4','B3','B2'], min:0, max:3000}, "True-colour");
 ```
+![Figure 8. Layer titles](L2_titles.png)
 
 
 -------
