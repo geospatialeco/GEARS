@@ -35,19 +35,25 @@ The objective of this lab is to strengthen your understanding of image visualisa
 
 ## Loading a Sentinel-2 multispectral image
 
-1. For this lab we will use a multi-spectral image collected by the European Space Agency's Sentinel-2 satellite. Sentinel-2 is a wide-swath, high-resolution, multi-spectral imaging mission supporting Copernicus Land Monitoring studies, including the monitoring of vegetation, soil and water cover, as well as observation of inland waterways and coastal areas.
+1. For this lab we will use a multi-spectral image collected by the European Space Agency's Sentinel-2 satellite. Sentinel-2 is a wide-swath, high-resolution, multi-spectral imaging mission supporting Copernicus Land Monitoring studies, including the monitoring of vegetation, soil and water cover, as well as observation of inland waterways and coastal areas. We will use an image collected over Kakadu National Park, Australia.
 
-We will use an image collected over Kakadu National Park, Australia, on 22 April 2018.
-
-2. Let's navigate to the area of interest by copying the code below into the Code Editor and clicking "Run". The number in brackets are the longitude, latitude, and zoom level.
+2. Let's navigate to the area of interest (Kakadu) by copying the code below into the Code Editor and clicking "Run". Remember that the line starting with // is a note to ourselves and to others, and is not processed (we call this a comment). The numbers in brackets are the longitude, latitude, and zoom level (range is from 1 to 22).
 
 ```JavaScript
+//Navigate to area of interest
 Map.setCenter(132.5685, -12.6312, 8);
 ```
-
+3. Now that we are in the right place, let's choose a Sentinel-2 image using the code below. Copy and paste into the Code Editor and click "Run". Copernicus refers to the satellite mission, S2 is short for Sentinel-2, and the long number 20180422T012719_20180422T012714_T52LHM refers to a specific image, defined by a date, time and a path and row of the satellite's orbit.
 
 ```JavaScript
-var sent2 = ee.Image("COPERNICUS/S2/20180422T012719_20180422T012714_T52LHM")
+// Select a specific Sentinel-2 image from the archive
+var sent2 = ee.Image("COPERNICUS/S2/20180422T012719_20180422T012714_T52LHM");
+```
+
+4. If the code did not return any errors, then the image was successfully found in the archive. To double check, let's run the line below to print the image information to the Console:
+
+```JavaScript
+print(sent2);
 ```
 
 ![Figure 2. Zoom to Darwin](navdarwin.png)
