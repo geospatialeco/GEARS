@@ -116,7 +116,7 @@ Map.addLayer(sent2,{bands:['B8','B4','B3'], min:0, max:3000}, "False-colour");
 ```
 ![Figure 9. False-colour composite](L2_falseNIR.png)
 
-14. Now you can navigate around the scene and flip between the true-colour and false-colour views using the layers tab. Take careful note of how different parts of the scene are represented in these visualisations.
+14. Now you can navigate around the scene and flip between the true-colour and false-colour views using the layers tab. Take careful note of how different parts of the scene are represented in these different visualisations - and explore how some features, like burn scars, jump out more clearly in the false-colour composite.
 
 ![Figure 10. Flip between layers](L2_colour2.gif)
 
