@@ -89,7 +89,9 @@ Map.addLayer(sent2,{bands:['B4','B3','B2']});
 Map.addLayer(sent2,{bands:['B4','B3','B2'], min:0, max:3000});
 ```
 
+![Figure 6. Second RGB](L2_rgb2.png)
 
+10. That looks better, this is a view similar to what we would see looking out of the window of an aeroplane - which is why we call it a true-colour composite. All three of the bands used in creating this composite occur in the visible portion of the electromagnetic spectrum.
 
 -------
 ### Thank you
