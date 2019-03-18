@@ -43,6 +43,9 @@ The objective of this lab is to strengthen your understanding of image visualisa
 //Navigate to area of interest
 Map.setCenter(132.5685, -12.6312, 8);
 ```
+
+![Figure 1. Navigate to Kakadu](L2_kakadu.png)
+
 3. Now that we are in the right place, let's choose a Sentinel-2 image using the code below. Copy and paste into the Code Editor and click "Run". Copernicus refers to the satellite mission, S2 is short for Sentinel-2, and the long number 20180422T012719_20180422T012714_T52LHM refers to a specific image, defined by a date, time and a path and row of the satellite's orbit.
 
 ```JavaScript
@@ -50,15 +53,14 @@ Map.setCenter(132.5685, -12.6312, 8);
 var sent2 = ee.Image("COPERNICUS/S2/20180422T012719_20180422T012714_T52LHM");
 ```
 
-4. If the code did not return any errors, then the image was successfully found in the archive. To double check, let's run the line below to print the image information to the Console:
+4. If the code did not return any errors, then the image was successfully found in the archive. To double check, let's run the line below to print the image information to the Console. Once the information loads in the Console, you can click the little dropdown arrows next to "Image" and "bands" to see more details about the band structure and naming format.
 
 ```JavaScript
 // Print image details to Console
 print(sent2);
 ```
 
-![Figure 1. Navigate to Kakadu](L2_kakadu.png)
-
+![Figure 2. View image properties in Console](L2_imageprop.png)
 
 2. Clear the script workspace by selecting "Clear script" from the Reset button dropdown menu.
 
