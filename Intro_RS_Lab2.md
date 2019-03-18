@@ -114,6 +114,7 @@ Map.addLayer(sent2,{bands:['B4','B3','B2'], min:0, max:3000}, "True-colour");
 // Add RGB composite to map, using NIR for false-colour
 Map.addLayer(sent2,{bands:['B8','B4','B3'], min:0, max:3000}, "False-colour");
 ```
+![Figure 9. False-colour composite](L2_falseNIR.png)
 
 
 -------
