@@ -111,8 +111,8 @@ Map.addLayer(sent2,{bands:['B4','B3','B2'], min:0, max:3000}, "True-colour");
 13. If look back to the table of Sentinel-2 wavelengths, we can see that Band 8 is in the NIR (near infra-red) spectrum. Therefore, to map a false-colour composite we need to put Band 8 into the red channel, move Band 4 into the green channel, and move Band 3 into the blue channel:
 
 ```JavaScript
-// Add RGB composite to map, using NIR
-Map.addLayer(sent2,{bands:['B4','B3','B2'], min:0, max:3000}, "False-colour");
+// Add RGB composite to map, using NIR for false-colour
+Map.addLayer(sent2,{bands:['B8','B4','B3'], min:0, max:3000}, "False-colour");
 ```
 
 
