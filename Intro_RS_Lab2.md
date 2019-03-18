@@ -53,10 +53,11 @@ var sent2 = ee.Image("COPERNICUS/S2/20180422T012719_20180422T012714_T52LHM");
 4. If the code did not return any errors, then the image was successfully found in the archive. To double check, let's run the line below to print the image information to the Console:
 
 ```JavaScript
+// Print image details to Console
 print(sent2);
 ```
 
-![Figure 2. Zoom to Darwin](navdarwin.png)
+![Figure 1. Navigate to Kakadu](L2_kakadu.png)
 
 
 2. Clear the script workspace by selecting "Clear script" from the Reset button dropdown menu.
