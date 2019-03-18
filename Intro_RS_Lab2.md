@@ -2,7 +2,7 @@
 GEARS - Geospatial Engineering and Remote Sensing lab - https://www.gears-lab.com
 
 # Introduction to Remote Sensing of the Environment
-Lab 2 - Understanding band combinations and spectral response curves in Google Earth Engine
+Lab 2 - Understanding band combinations and spectral response curves
 --------------
 
 ### Acknowledgments
@@ -62,11 +62,11 @@ print(sent2);
 
 ![Figure 2. View image properties in Console](L2_imageprop.png)
 
-5. Clear the script workspace by selecting "Clear script" from the Reset button dropdown menu.
+5. We can see from the Console information that the image contains multiple bands, called B1, B2, B3 etc. To find out which wavelengths these bands represent, lets use the seach bar to find out more information. Type "Sentinel-2" in to the search bar and you will see it appear in the results list.
 
 ![Figure 3. Search for Sentinel-2](L2_search.png)
 
-6. Search for “elevation” and click on the SRTM Digital Elevation Data 30m result to show the dataset description.
+6. Click on "Sentinel-2 MSI: MultiSpectral Instrument, Level 1-C" to open the information panel. The table provided is very useful for gaining an quick overview of the available bands, their wavelengths and spatial resolutions.
 
 ![Figure 4. Overview of band information](L2_bands.png)
 
