@@ -70,12 +70,24 @@ print(sent2);
 
 ![Figure 4. Overview of band information](L2_bands.png)
 
-7. Bands 2,3 and 4 are the blue, green and red bands respectively. Therefore if we wish to view a true-colour rendering of the image - i.e. an RGB composite, we need to place Band 4 into the red channel, Band 3 into the green channel, and Band 2 into the blue channel. We can do this with the code below - take careful note of the syntax for specifying the band arrangement.
+7. Now before we go any further, please save your current script by clicking the drop down on the Save button, and selecting "Save as". Save it into your course repository so that you can come back to it at any stage, and from any device with a web browser.
+
+![Figure 5. Save your script](L2_save.png)
+
+8. Getting back to our image, Bands 2,3 and 4 are the blue, green and red bands respectively. Therefore if we wish to view a true-colour rendering of the image - i.e. an RGB composite, we need to place Band 4 into the red channel, Band 3 into the green channel, and Band 2 into the blue channel. We can do this with the code below - take careful note of the syntax for specifying the band arrangement.
 
 ```JavaScript
 Map.addLayer(sent2,{bands:['B4','B3','B2']});
 ```
 
+![Figure 6. First RGB](L2_rgb.png)
+
+9. After running the previous line of code, we can see that an image loads in the map viewer but it is completely dark. This is because we did not specify any visualisation parameters. Reflectance values for Sentinel-2 products range from 0 to 3000, so let's specify this in our code like shown below (noting that all visualisation parameters are inside the {} brackets):
+
+
+```JavaScript
+Map.addLayer(sent2,{bands:['B4','B3','B2'], min:0, max:3000});
+```
 
 
 
