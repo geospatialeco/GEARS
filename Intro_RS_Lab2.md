@@ -28,7 +28,7 @@ Google Earth Engine uses the JavaScript programming language. We will cover the 
 ------------------------------------------------------------------------
 
 ### Objective
----------
+
 
 The objective of this lab is to strengthen your understanding of image visualisation principles, and develop practical skills in mapping band combinations and exploring reflectance spectra.
 
