@@ -138,7 +138,6 @@ Map.addLayer(sent2,{bands:['B12'], min:0, max:3000}, "B12");
 ```
 17. Use the layers tab to turn band off and on in the map display view. Take note of which landscape elements appear brighter and darker as you change band number (and therefore wavelength).
 
-
 ------
 ### Practical exercise
 
