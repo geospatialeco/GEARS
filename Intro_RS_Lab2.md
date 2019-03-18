@@ -56,21 +56,20 @@ var sent2 = ee.Image("COPERNICUS/S2/20180422T012719_20180422T012714_T52LHM");
 4. If the code did not return any errors, then the image was successfully found in the archive. To double check, let's run the line below to print the image information to the Console. Once the information loads in the Console, you can click the little dropdown arrows next to "Image" and "bands" to see more details about the band structure and naming format.
 
 ```JavaScript
-// Print image details to Console
+// Print image details to the Console
 print(sent2);
 ```
 
 ![Figure 2. View image properties in Console](L2_imageprop.png)
 
-2. Clear the script workspace by selecting "Clear script" from the Reset button dropdown menu.
+5. Clear the script workspace by selecting "Clear script" from the Reset button dropdown menu.
 
-![Figure 3. Clear script](clearscript.png)
+![Figure 3. Search for Sentinel-2](L2_search.png)
 
-3. Search for “elevation” and click on the SRTM Digital Elevation Data 30m result to show the dataset description.
+6. Search for “elevation” and click on the SRTM Digital Elevation Data 30m result to show the dataset description.
 
-![Figure 4. Search for elevation data](elevsearch.png)
+![Figure 4. Overview of band information](L2_bands.png)
 
-4. View the information on the dataset, and then click on Import, which moves the variable to the Imports section at the top of your script.
 
 
 
