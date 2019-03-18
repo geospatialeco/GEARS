@@ -91,7 +91,12 @@ Map.addLayer(sent2,{bands:['B4','B3','B2'], min:0, max:3000});
 
 ![Figure 6. Second RGB](L2_rgb2.png)
 
-10. That looks better, this is a view similar to what we would see looking out of the window of an aeroplane - which is why we call it a true-colour composite. All three of the bands used in creating this composite occur in the visible portion of the electromagnetic spectrum.
+10. That looks better, this is a view similar to what we would see looking out of the window of an airplane - which is why we call it a true-colour composite. All three of the bands used in creating this composite occur in the visible portion of the electromagnetic spectrum.
+
+11. Zoom in a bit closer using the wheel of your mouse. These images are a fantastic resource for environmental mapping and monitoring. The visible spectrum bands are at 10m spatial resolution, and the revisit time of the satellite constellation is every 6 days in this region. Thanks ESA!
+
+![Figure 7. Zoomed RGB](L2_rgb3.png)
+
 
 -------
 ### Thank you
