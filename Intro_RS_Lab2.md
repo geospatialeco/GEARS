@@ -97,7 +97,7 @@ Map.addLayer(sent2,{bands:['B4','B3','B2'], min:0, max:3000});
 
 ![Figure 7. Zoomed RGB](L2_rgb3.png)
 
-12. Before we go any further lets clean up our code a bit. We didn't comment the last two lines - lets fix that, and let's give titles to the layers in the map view so that we know which is which in the layer tab. We can paste there lines over the previous two.
+12. Before we go any further lets clean up our code a bit. We didn't comment the last two lines - let's fix that, and let's give titles to the layers in the map view so that we know which is which in the layer tab. We can paste these lines over the previous two.
 
 ```JavaScript
 // Add RGB composite to map, without parameters defined
