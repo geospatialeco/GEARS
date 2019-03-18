@@ -66,10 +66,15 @@ print(sent2);
 
 ![Figure 3. Search for Sentinel-2](L2_search.png)
 
-6. Click on "Sentinel-2 MSI: MultiSpectral Instrument, Level 1-C" to open the information panel. The table provided is very useful for gaining an quick overview of the available bands, their wavelengths and spatial resolutions.
+6. Click on "Sentinel-2 MSI: MultiSpectral Instrument, Level 1-C" to open the information panel. The table provided is very useful for gaining a quick overview of the available bands, their wavelengths and spatial resolutions.
 
 ![Figure 4. Overview of band information](L2_bands.png)
 
+7. Bands 2,3 and 4 are the blue, green and red bands respectively. Therefore if we wish to view a true-colour rendering of the image - i.e. an RGB composite, we need to place Band 4 into the red channel, Band 3 into the green channel, and Band 2 into the blue channel. We can do this with the code below - take careful note of the syntax for specifying the band arrangement.
+
+```JavaScript
+Map.addLayer(sent2,{bands:['B4','B3','B2']});
+```
 
 
 
