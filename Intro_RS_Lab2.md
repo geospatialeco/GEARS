@@ -7,7 +7,7 @@ Lab 2 - Understanding band combinations and spectral response curves in Google E
 
 ### Acknowledgments
 - Google Earth Engine Team
-- Earth Engine Beginning Curriculum
+- Google Earth Engine Developers group
 
 ------
 
@@ -33,9 +33,18 @@ Google Earth Engine uses the JavaScript programming language. We will cover the 
 The objective of this lab is to strengthen your understanding of image visualisation principles, and develop practical skills in mapping band combinations and exploring reflectance spectra.
 
 
-## 2. Loading a Sentinel-2 multispectral image
+## Loading a Sentinel-2 multispectral image
 
-1. For this lab we will use a multi-spectral image collected by the European Space Agency's Sentinel-2 satellite.
+1. For this lab we will use a multi-spectral image collected by the European Space Agency's Sentinel-2 satellite. Sentinel-2 is a wide-swath, high-resolution, multi-spectral imaging mission supporting Copernicus Land Monitoring studies, including the monitoring of vegetation, soil and water cover, as well as observation of inland waterways and coastal areas.
+
+We will use an image collected over Kakadu National Park, Australia, on 22 April 2018.
+
+2. Let's navigate to the area of interest by copying the code below into the Code Editor and clicking "Run". The number in brackets are the longitude, latitude, and zoom level.
+
+```JavaScript
+Map.setCenter(132.5685, -12.6312, 8);
+```
+
 
 ```JavaScript
 var sent2 = ee.Image("COPERNICUS/S2/20180422T012719_20180422T012714_T52LHM")
