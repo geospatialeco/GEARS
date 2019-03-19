@@ -133,7 +133,7 @@ Map.addLayer(sent2,{bands:['B1'], min:0, max:3000}, "B1");
 ```JavaScript
 // Add a few more bands to map
 Map.addLayer(sent2,{bands:['B4'], min:0, max:3000}, "B4");
-Map.addLayer(sent2,{bands:['B8'], min:0, max:3000}, "B18");
+Map.addLayer(sent2,{bands:['B8'], min:0, max:3000}, "B8");
 Map.addLayer(sent2,{bands:['B12'], min:0, max:3000}, "B12");
 ```
 17. Use the layers tab to turn bands off and on in the map display view. Take note of which landscape elements appear brighter and darker as you change band number (and therefore move from shorter to longer wavelengths).
