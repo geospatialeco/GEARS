@@ -126,7 +126,7 @@ Map.addLayer(sent2,{bands:['B8','B4','B3'], min:0, max:3000}, "False-colour");
 // Add Band 1 to map
 Map.addLayer(sent2,{bands:['B1'], min:0, max:3000}, "B1");
 ```
-![Figure 11. Display band 1 ](L2_B1.png)
+![Figure 11. Display band 1 ](L2_B1a.png)
 
 16. To display more the bands individually, the code is the same - e.g.:
 
@@ -136,7 +136,7 @@ Map.addLayer(sent2,{bands:['B4'], min:0, max:3000}, "B4");
 Map.addLayer(sent2,{bands:['B8'], min:0, max:3000}, "B18");
 Map.addLayer(sent2,{bands:['B12'], min:0, max:3000}, "B12");
 ```
-17. Use the layers tab to turn band off and on in the map display view. Take note of which landscape elements appear brighter and darker as you change band number (and therefore wavelength).
+17. Use the layers tab to turn bands off and on in the map display view. Take note of which landscape elements appear brighter and darker as you change band number (and therefore wavelength).
 
 ------
 ### Practical exercise
