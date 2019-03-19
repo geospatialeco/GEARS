@@ -165,6 +165,8 @@ var sent2dry = ee.Image("COPERNICUS/S2/20180810T012709_20180810T012711_T52LHM");
 
 5. Experiment with the combinations listed above and think about why we might want to use them.
 
+6. Use this image (COPERNICUS/S2/20180130T000241_20180130T000235_T56HLH) to explore a more urban setting in Sydney.
+
 -------
 ### Thank you
 
