@@ -156,7 +156,7 @@ var sent2dry = ee.Image("COPERNICUS/S2/20180810T012709_20180810T012711_T52LHM");
     - False colour infrared: 8 4 3
     - False colour urban: 12 11 4
     - Agriculture: 11 8 2
-    - Atmospheric penetration: 12 11 8a
+    - Atmospheric penetration: 12 11 8A
     - Healthy vegetation: 8 11 2
     - Land/Water: 8 11 4
     - Natural colours with atmospheric removal: 12 8 3
