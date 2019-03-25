@@ -30,9 +30,9 @@ Google Earth Engine uses the JavaScript programming language. We will cover the 
 ### Objective
 
 
-The objective of this lab is gain understanding of various spectral indices and develop the skills for calculating any index you require. Before getting to that, we will build upon last weeks' lab and learn how to find an image for any location of interest.
+The objective of this lab is to gain understanding of a range of spectral indices and develop the skills for calculating any index you require. Before getting to that, we will build upon last week's lab and learn how to find an image for any geographic location of interest.
 
-1. Just above the Coding panel is  search bar. Search for ‘Darwin’ in this GEE search bar, and click the result to pan and zoom the map to Darwin (Figure 2).
+1. Just above the Coding panel is the search bar. Search for ‘Darwin’ in this GEE search bar, and click the result to pan and zoom the map to Darwin (Figure 2).
 
 
 ![Figure 1. Navigating to area of interest in Google Earth Engine](search.png)
@@ -92,7 +92,7 @@ The objective of this lab is gain understanding of various spectral indices and 
 ## Adding images to the map view
 9. Now in order to actually have a look at this image, we need to add it to our mapping environment. Before doing that however, lets define how we want to display the image. Let’s start with a true colour representation by pasting the following lines below the ones you’ve already added, and click "Run".
 
-```javascript
+```JavaScript
 // Define visualization parameters in a JavaScript dictionary for true colour rendering. Bands 4,3 and 2 needed for RGB.
     var trueColour = {
         bands: ["B4", "B3", "B2"],
@@ -113,7 +113,7 @@ The objective of this lab is gain understanding of various spectral indices and 
 
 12. Now let's have a look at a false colour composite - we need to bring in the near-infrared band (band 8) for this. Paste the following lines below the ones you’ve already added, and click "Run".
 
-```javascript
+```JavaScript
 //Define false-colour visualization parameters.
     var falseColour = {
         bands: ["B8", "B4", "B3"],
@@ -155,9 +155,18 @@ Paste the following lines below the ones you’ve already added, and click "Run"
 
 ![Figure 10. Retrieving NDVI from Sentinel-2](ndvi.png)
 
+15. Explore different parts of the image and see how NDVI values vary with different substrate types.
+
 
 ----
 ### Practical exercise
+
+1. Search for cloud free Sentinel-2 image from May, July and September 2018 collected over Litchfield National Park (Litchfield is located south of Darwin, near the town of Batchelor, Northern Territory, Australia).
+2. Calculate NDVI for each of the scenes and load them into the map view.
+3. Inspect how NDVI varies spatially across each image, and explore how patterns in NDVI vary according to time of year.
+4. Search for a cloud free Landsat 8 image (Landsat 8 TOA collection) from May, July and September 2018 collected over Litchfield National Park.
+5. Remember that the band position of RED and NIR wavelengths might differ between different sensors. For Landsat 8, the metadata property for cloud cover is 'CLOUD_COVER', and the reflectance values range from 0 - 0.3.
+6. Compare NDVI values attained from the two sensors. 
 
 -------
 ### Thank you
