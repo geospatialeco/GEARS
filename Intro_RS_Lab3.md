@@ -161,12 +161,12 @@ Paste the following lines below the ones you’ve already added, and click "Run"
 ----
 ### Practical exercise
 
-1. Search for cloud free Sentinel-2 image from May, July and September 2018 collected over Litchfield National Park (Litchfield is located south of Darwin, near the town of Batchelor, Northern Territory, Australia).
+1. Search for a cloud free Sentinel-2 image from May, July and September 2018 collected over Litchfield National Park (Litchfield is located south of Darwin, near the town of Batchelor, Northern Territory, Australia).
 2. Calculate NDVI for each of the scenes and load them into the map view.
 3. Inspect how NDVI varies spatially across each image, and explore how patterns in NDVI vary according to time of year.
-4. Search for a cloud free Landsat 8 image (Landsat 8 TOA collection) from May, July and September 2018 collected over Litchfield National Park.
-5. Remember that the band position of RED and NIR wavelengths might differ between different sensors. For Landsat 8, the metadata property for cloud cover is 'CLOUD_COVER', and the reflectance values range from 0 - 0.3.
-6. Compare NDVI values attained from the two sensors. 
+4. Search for a cloud free Landsat 8 image (USGS Landsat 8 Surface Reflectance Tier 1) from May, July and September 2018 collected over Litchfield National Park.
+5. Remember that the band position of RED and NIR wavelengths might differ between different sensors. For Landsat 8, the metadata property for cloud cover is 'CLOUD_COVER'.
+6. Compare NDVI values attained from the two sensors and think about why they might differ.
 
 -------
 ### Thank you
