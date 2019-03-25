@@ -131,7 +131,7 @@ The objective of this lab is gain understanding of various spectral indices and 
 
 ---------
 
-##Calculating NDVI
+### Calculating NDVI
 
 14. Next, let's calculate the normalised-difference vegetation index (NDVI) for this image. NDVI is an index calculated from the RED and NIR bands, according to this equation:
 
