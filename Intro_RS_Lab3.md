@@ -32,7 +32,7 @@ Google Earth Engine uses the JavaScript programming language. We will cover the 
 
 The objective of this lab is to gain understanding of a range of spectral indices and develop the skills for calculating any index you require. Before getting to that, we will build upon last week's lab and learn how to find an image for any geographic location of interest.
 
-1. Just above the Coding panel is the search bar. Search for ‘Darwin’ in this GEE search bar, and click the result to pan and zoom the map to Darwin (Figure 2).
+1. Just above the Coding panel is the search bar. Search for ‘Darwin’ in this GEE search bar, and click the result to pan and zoom the map to Darwin (Figure 1).
 
 
 ![Figure 1. Navigating to area of interest in Google Earth Engine](search.png)
@@ -61,7 +61,7 @@ The objective of this lab is to gain understanding of a range of spectral indice
 
 ---------
 
-##Filtering image collections
+### Filtering image collections
 
 7. To achieve this we need to use a bit of coding. In the JavaScript programming language two backslashes (//) indicate comment lines and are ignored in actual processing steps. We use // to write notes to ourselves in our code, so that we (and others who might want to use our code) can understand why we have done certain things.
 
