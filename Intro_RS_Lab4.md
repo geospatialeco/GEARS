@@ -59,7 +59,7 @@ Have a look around the scene and familiarise yourself with the landscape.
 6. Add the following line to merge the imports into a single FeatureCollection:
 
 ```javascript
-var newfc = urban.merge(vegetation).merge(water);
+var newfc = urban.merge(water).merge(vegetation);
 ```
 
 Optional: print the feature collection and inspect the features.
@@ -106,7 +106,7 @@ Map.addLayer(image,
 {bands: ['B4', 'B3', 'B2'], min:0, max: 3000},
 'Landsat image');
 Map.addLayer(classified,
-{min: 0, max: 2, palette: ['yellow', 'green', 'blue']},
+{min: 0, max: 2, palette: ['yellow', 'blue', 'green']},
 'classification');
 Map.addLayer(newfc);
 ```
