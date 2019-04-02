@@ -36,9 +36,14 @@ The objective of this lab is to gain understanding of the image classification p
 
 ## Loading up the image
 
-The first step is to get a cloud free image with which to work.  Do this by importing USGS Landsat 8 Surface Reflectance Tier 1 imagery, spatially filtering to a region of interest, temporally filtering to your required date range, and lastly sorting by cloud cover and extracting the least cloudy scene.
+The first step is to get a cloud free image with which to work.  Do this by importing USGS Landsat 8 Surface Reflectance Tier 1 imagery, spatially filtering to a region of interest (filterBounds), temporally filtering to your required date range (filterDate), and lastly sorting by cloud cover ("CLOUD_COVER) and extracting the least cloudy scene (first).
 
-Building on from last week, we can use the point drawing tool (teardrop icon) from the geometry tools and draw a single point in the region of interest - let's use the town of Cairns for this example.  Then 'Exit' from the drawing tools.  Note that a new variable is created in the imports section, containing the single point, imported as a Geometry.  Name this import roi and run:
+Building on from last week, we can use the point drawing tool (teardrop icon) from the geometry tools and draw a single point in the region of interest - let's use the town of Cairns for this example.  Then 'Exit' from the drawing tools.  Note that a new variable is created in the imports section, containing the single point, imported as a Geometry.  Chnage the name of this import to "roi" - short for region of interest.
+
+
+![Figure 1. Navigating to Cairns](l4_cairns.png)
+
+Next we can run the script below to extract our desired image from the Landsat 8 collection and add it to the map view as a true-colour composite:
 
 ```JavaScript
 var image = ee.Image(ee.ImageCollection('LANDSAT/LC08/C01/T1_SR')
@@ -46,9 +51,14 @@ var image = ee.Image(ee.ImageCollection('LANDSAT/LC08/C01/T1_SR')
     .filterDate('2016-05-01', '2016-06-30')
     .sort('CLOUD_COVER')
     .first());
-Map.addLayer(image, {bands: ['B4', 'B3', 'B2'],min:0, max: 3000}, 'truce colour image');
+Map.addLayer(image, {bands: ['B4', 'B3', 'B2'],min:0, max: 3000}, 'True colour image');
 ```
-Have a look around the scene and familiarise yourself with the landscape.
+
+![Figure 2. Adding image to map view](l4_layers.png)
+
+Have a look around the scene and familiarise yourself with the landscape. You'll notice the image is quite dark image - we can adjust the brightness/contrast using the settings wheels for the layer we created in the Layers tab. Slide the Gamma adjuster slightly to the right (from 1.0 to 1.4) to increase the brightness of the scene.
+
+![Figure 3. Brightness adjustment](l4_gamma.png)
 
 ## Gathering training data
 1. The next step is to collect training data for classification.  Using the cloud free scene as guidance, hover on the 'Geometry Imports' box next to the geometry drawing tools and click '+ new layer.'
