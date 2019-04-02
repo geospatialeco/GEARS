@@ -2,18 +2,13 @@
 GEARS - Geospatial Engineering and Remote Sensing lab - https://www.gears-lab.com
 
 # Introduction to Remote Sensing of the Environment
-Assignment 2 - Spectral properties and indices
+Assessment Item 2 - Spectral properties and indices
 -----------------
 
+The objective of this assessment is to reinforce your knowledge of spectral properties and indices through practical application. The skills required have been covered in Labs 1-3, but some further exploration and independent research will be required on your part. Talk to your classmates and use the Discussion board if you get stuck.
 
-## Objective
+----
 
-
-The objective of this assignment is to reinforce your knowledge of spectral properties and indices through practical application. The skills required have been covered in Labs 1-3, but some further exploration and independent research will be required on your part. Talk to your classmates and use the Discussion board if you get stuck.
------
-
-
-## Assignment
 ### Location
 
 The area of interest for this assignment is the area between berry Springs and Manton Dam in the Northern Territory. The coordinates of the area of interest (AOI) are:
