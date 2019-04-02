@@ -47,7 +47,7 @@ deltaNBR = prefireNBR - postfireNBR
 
 ### Assignment format
 
-*Due date* : 05 May
+*Due date* : 05 May 2019
 
 *Submission format* : Single PDF document submitted via in Learnline
 
