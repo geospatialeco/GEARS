@@ -103,10 +103,10 @@ Display the results.  You may need to adjust  the colors, but if the training da
 //Display classification
 Map.centerObject(newfc, 11);
 Map.addLayer(image,
-{bands: ['B4', 'B3', 'B2'], max: 0.3},
+{bands: ['B4', 'B3', 'B2'], min:0, max: 3000},
 'Landsat image');
 Map.addLayer(classified,
-{min: 0, max: 2, palette: ['0000FF', '00FF00', 'FF0000']},
+{min: 0, max: 2, palette: ['yellow', 'green', 'blue']},
 'classification');
 Map.addLayer(newfc);
 ```
