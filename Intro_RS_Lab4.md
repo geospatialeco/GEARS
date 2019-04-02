@@ -61,7 +61,7 @@ Have a look around the scene and familiarise yourself with the landscape. You'll
 ![Figure 3. Brightness adjustment](l4_gamma.png)
 
 ## Gathering training data
-1. The next step is to collect training data for classification.  Using the cloud free scene as guidance, hover on the 'Geometry Imports' box next to the geometry drawing tools and click '+ new layer.'
+1. The first step in classifying our image is to collect some training data to teach the classifier.  Using the cloud free scene as guidance, hover on the 'Geometry Imports' box next to the geometry drawing tools and click '+ new layer.'
 2. Each new layer represents one class within the training data, for example 'urban.'
 3. Let the first new layer represent 'urban.'  Locate points in the new layer in urban or built up areas (buildings, roads, parking lots, etc.) and click to collect them.
 4. When finished collecting points, click 'Exit' and configure the import (top of the script) as follows.  Name the layer 'urban' and click the  icon to configure it.  'Import as' FeatureCollection.  'Add property' landcover and set its value to 0.  (Subsequent classes will be 1, 2, etc.)  when finished, click 'OK' as shown:
