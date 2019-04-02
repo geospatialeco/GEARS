@@ -51,7 +51,7 @@ Short report format that includes:
 - your name
 - your course code
 - title
-- answers in neat paragraphs
+- answers in neat paragraphs under appropriate sub-headings
 - clearly labelled figures
 
 #### Mark allocations
