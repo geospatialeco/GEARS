@@ -43,10 +43,10 @@ Building on from last week, we can use the point drawing tool (teardrop icon) fr
 ```JavaScript
 var image = ee.Image(ee.ImageCollection('LANDSAT/LC08/C01/T1_SR')
     .filterBounds(roi)
-    .filterDate('2018-05-01', '2018-06-31')
+    .filterDate('2018-05-01', '2018-06-30')
     .sort('CLOUD_COVER')
     .first());
-Map.addLayer(image, {bands: ['B4', 'B3', 'B2'], max: 0.3}, 'truce colour image');
+Map.addLayer(image, {bands: ['B4', 'B3', 'B2'], max: 3000}, 'truce colour image');
 ```
 Have a look around the scene and familiarise yourself with the landscape.
 
