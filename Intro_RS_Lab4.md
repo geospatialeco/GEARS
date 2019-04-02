@@ -38,7 +38,7 @@ The objective of this lab is to gain understanding of the image classification p
 
 The first step is to get a cloud free image with which to work.  Do this by importing USGS Landsat 8 Surface Reflectance Tier 1 imagery, spatially filtering to a region of interest, temporally filtering to your required date range, and lastly sorting by cloud cover and extracting the least cloudy scene.
 
-Building on from last week, we can use the point drawing tool (teardrop icon) from the geometry tools and draw a single point in the region of interest - let's use the town of Alice Springs for this example.  Then 'Exit' from the drawing tools.  Note that a new variable is created in the imports section, containing the single point, imported as a Geometry.  Name this import roi and run:
+Building on from last week, we can use the point drawing tool (teardrop icon) from the geometry tools and draw a single point in the region of interest - let's use the town of Cairns for this example.  Then 'Exit' from the drawing tools.  Note that a new variable is created in the imports section, containing the single point, imported as a Geometry.  Name this import roi and run:
 
 ```JavaScript
 var image = ee.Image(ee.ImageCollection('LANDSAT/LC08/C01/T1_SR')
