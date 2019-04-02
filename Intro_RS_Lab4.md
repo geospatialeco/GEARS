@@ -36,9 +36,9 @@ The objective of this lab is to gain understanding of the image classification p
 
 ## Loading up the image
 
-The first step is to get a cloud free image with which to work.  Do this by importing USGS Landsat 8 Surface Reflectance Tier 1 imagery, spatially filtering to a region of interest, temporally filtering, sorting by cloud cover and extracting the least cloudy scene.
+The first step is to get a cloud free image with which to work.  Do this by importing USGS Landsat 8 Surface Reflectance Tier 1 imagery, spatially filtering to a region of interest, temporally filtering to your required date range, and lastly sorting by cloud cover and extracting the least cloudy scene.
 
-Building on from last week, we can use the point drawing tool (teardrop icon) from the geometry tools and draw a single point in the region of interest - let's use the town of Alice Springs for thsi example.  Then 'Exit' from the drawing tools.  Note that a new variable is created in the imports, containing the single point, imported as a Geometry.  Name this import roi and run:
+Building on from last week, we can use the point drawing tool (teardrop icon) from the geometry tools and draw a single point in the region of interest - let's use the town of Alice Springs for this example.  Then 'Exit' from the drawing tools.  Note that a new variable is created in the imports section, containing the single point, imported as a Geometry.  Name this import roi and run:
 
 ```JavaScript
 var image = ee.Image(ee.ImageCollection('LANDSAT/LC08/C01/T1_SR')
@@ -48,11 +48,12 @@ var image = ee.Image(ee.ImageCollection('LANDSAT/LC08/C01/T1_SR')
     .first());
 Map.addLayer(image, {bands: ['B4', 'B3', 'B2'], max: 0.3}, 'truce colour image');
 ```
+Have a look around the scene and familiarise yourself with the landscape.
 
 ## Gathering training data
-1. The second step is to collect training data.  Using the cloud free scene as guidance, hover on the 'Geometry Imports' box next to the geometry drawing tools and click '+ new layer.'
+1. The next step is to collect training data for classification.  Using the cloud free scene as guidance, hover on the 'Geometry Imports' box next to the geometry drawing tools and click '+ new layer.'
 2. Each new layer represents one class within the training data, for example 'urban.'
-3. Let the first new layer represent 'urban.'  Locate points in the new layer in urban or built up areas (buildings, roads, parking lots, etc.).
+3. Let the first new layer represent 'urban.'  Locate points in the new layer in urban or built up areas (buildings, roads, parking lots, etc.) and click to collect them.
 4. When finished collecting points, click 'Exit' and configure the import (top of the script) as follows.  Name the layer 'urban' and click the  icon to configure it.  'Import as' FeatureCollection.  'Add property' landcover and set its value to 0.  (Subsequent classes will be 1, 2, etc.)  when finished, click 'OK' as shown:
 5. Repeat step 4 for each land cover class in the classification, ensuring that training points overlap the image.   An easy one is to get vegetation and water points next, for a total of three classes: {urban, vegetation, water}.
 6. Add the following line to merge the imports into a single FeatureCollection:
