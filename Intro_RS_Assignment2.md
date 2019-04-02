@@ -24,7 +24,7 @@ Two Sentinel-2 scenes need to be used for your analysis. One collected on 25 Apr
 
 ### Tasks
 
-1. Explore the area in the April image and take note of the different landcover types and land-uses with the AOI.
+1. Explore the area in the April image and take note of the different landcover types and land-uses within the AOI.
 2. Visually identify the following 7 landcover classes:
     - water
     - savanna woodland
