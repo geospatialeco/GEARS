@@ -11,7 +11,7 @@ The objective of this assessment is to reinforce your knowledge of spectral prop
 
 ### Location
 
-The area of interest for this assignment is the area between berry Springs and Manton Dam in the Northern Territory. The coordinates of the area of interest (AOI) are:
+The area of interest for this assignment is the area between berry Springs and Manton Dam in the Northern Territory. The corner coordinates of the area of interest (AOI) are:
 
 1: [130.887,-12.669]
 2: [130.887,-12.927]
@@ -47,12 +47,18 @@ deltaNBR = prefireNBR - postfireNBR
 
 ### Assignment format
 
-Short report format that includes:
+*Due date* : 05 May
+
+*Submission format* : Single PDF document submitted via in Learnline
+
+*Filename format* : Lastname_Assessment2_ENVXXX.pdf
+
+Your short report should include:
 - your name
 - your course code
 - title
 - answers in neat paragraphs under appropriate sub-headings
-- clearly labelled figures
+- clearly captioned figures
 
 #### Mark allocations
 - Spectral response curve plots and discussion (10 marks)
