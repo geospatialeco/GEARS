@@ -46,7 +46,7 @@ var image = ee.Image(ee.ImageCollection('LANDSAT/LC08/C01/T1_SR')
     .filterDate('2018-05-01', '2018-06-30')
     .sort('CLOUD_COVER')
     .first());
-Map.addLayer(image, {bands: ['B4', 'B3', 'B2'], max: 3000}, 'truce colour image');
+Map.addLayer(image, {bands: ['B4', 'B3', 'B2'],min:0, max: 3000}, 'truce colour image');
 ```
 Have a look around the scene and familiarise yourself with the landscape.
 
