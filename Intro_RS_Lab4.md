@@ -59,7 +59,7 @@ Have a look around the scene and familiarise yourself with the landscape.
 6. Add the following line to merge the imports into a single FeatureCollection:
 
 ```javascript
-var newfc = geometry.merge(geometry2).merge(geometry3);
+var newfc = urban.merge(vegetation).merge(water);
 ```
 
 Optional: print the feature collection and inspect the features.
