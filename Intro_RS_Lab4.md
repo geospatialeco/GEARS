@@ -81,7 +81,7 @@ Optional: print the training data and inspect the features to ensure there is a 
 
 ## Train the classifier and run the classification
 
-Train the classifier:
+First we need to train the classifier by providing examples of what different landcover class look like from a multi-spectral perspective.
 
 ```javascript
 var classifier = ee.Classifier.cart().train({
@@ -91,13 +91,14 @@ var classifier = ee.Classifier.cart().train({
 });
 ```
 
-And then classify the image:
+Then we can apply this knowledge to the rest of the image - using was was learnt from our training to inform decisions about which class other pixels should belong to.
+
 ```javascript
 //Run the classification
 var classified = image.select(bands).classify(classifier);
 ```
 
-Display the results.  You may need to adjust  the colors, but if the training data have been created with urban=0, vegetation=1 and water=2, then the result will be rendered with those classes as red, green and blue, respectively.
+Display the results.  You may need to adjust  the colors, but if the training data have been created with urban=0, water=1 and vegetation=2, then the result will be rendered with those classes as yellow, blue and green, respectively.
 
 ```javascript
 //Display classification
@@ -110,6 +111,12 @@ Map.addLayer(classified,
 'classification');
 Map.addLayer(newfc);
 ```
+
+## Examine your results
+
+- Are you happy with the classification?
+- How could it be improved?
+- Try adding in some extra classes for landcover categories that show signs of confusion
 
 -------
 ### Thank you
