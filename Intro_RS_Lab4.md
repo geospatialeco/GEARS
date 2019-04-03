@@ -72,7 +72,7 @@ Have a look around the scene and familiarise yourself with the landscape. You'll
 
 5. Next you can configure the urban geometry import (cog-wheel, top of the script in imports section) as follows.  Click the cog-wheel icon to configure it, change 'Import as'  from 'Geometry' to 'FeatureCollection'.  Use 'Add property' landcover and set its value to 0.  (Subsequent classes will be 1, 2, etc.)  when finished, click 'OK'.
 
-![Figure 5. The geometry dialogue box](screenshots\l4_cog.png)
+![Figure 5. The geometry dialogue box](screenshots/l4_cog.png)
 
 
 
