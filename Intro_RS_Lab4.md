@@ -61,12 +61,18 @@ Have a look around the scene and familiarise yourself with the landscape. You'll
 ![Figure 3. Brightness adjustment](l4_gamma.png)
 
 ## Gathering training data
-1. The first step in classifying our image is to collect some training data to teach the classifier.  Using the cloud free scene as guidance, hover on the 'Geometry Imports' box next to the geometry drawing tools and click '+ new layer.'
-2. Each new layer represents one class within the training data, for example 'urban.'
-3. Let the first new layer represent 'urban.'  Locate points in the new layer in urban or built up areas (buildings, roads, parking lots, etc.) and click to collect them.
-4. When finished collecting points, click 'Exit' and configure the import (top of the script) as follows.  Name the layer 'urban' and click the  icon to configure it.  'Import as' FeatureCollection.  'Add property' landcover and set its value to 0.  (Subsequent classes will be 1, 2, etc.)  when finished, click 'OK' as shown:
-5. Repeat step 4 for each land cover class in the classification, ensuring that training points overlap the image.   An easy one is to get vegetation and water points next, for a total of three classes: {urban, vegetation, water}.
-6. Add the following line to merge the imports into a single FeatureCollection:
+1. The first step in classifying our image is to collect some training data to teach the classifier.  We want to collect representative samples of reflectance spectra for each landcover class of interest.
+2. Using the cloud free scene as guidance, hover on the 'Geometry Imports' box next to the geometry drawing tools and click '+ new layer.'
+3. Each new layer represents one class within the training data, for example 'urban.'
+4. Let the first new layer represent 'urban.'  Locate points in the new layer in urban or built up areas (buildings, roads, parking lots, etc.) and click to collect them 9adding points in the geometry layer.
+5. Collect 25 representative points and rename the 'geometry' as 'urban'.
+
+![Figure 4. Create and collect the urban class](screenshots/l4_urban.png)
+
+
+5. When finished collecting points, click 'Exit' and configure the import (top of the script) as follows.  Name the layer 'urban' and click the  icon to configure it.  'Import as' FeatureCollection.  'Add property' landcover and set its value to 0.  (Subsequent classes will be 1, 2, etc.)  when finished, click 'OK' as shown:
+6. Repeat step 4 for each land cover class in the classification, ensuring that training points overlap the image.   An easy one is to get vegetation and water points next, for a total of three classes: {urban, vegetation, water}.
+7. Add the following line to merge the imports into a single FeatureCollection:
 
 ```javascript
 var newfc = urban.merge(water).merge(vegetation);
