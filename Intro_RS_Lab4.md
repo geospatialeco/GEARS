@@ -112,7 +112,6 @@ After running the script the training data will be printed to the console. You w
 ![Figure 8. Printing training data](screenshots/l4_training.png)
 
 
-
 ## Train the classifier and run the classification
 
 Now we can train the classifier algorithm by using our examples of what different landcover class look like from a multi-spectral perspective.
@@ -142,6 +141,9 @@ Map.addLayer(classified,
 {min: 0, max: 3, palette: ['red', 'blue', 'green','yellow']},
 'classification');
 ```
+
+![Figure 9. Classified map](screenshots/l4_classified.png)
+
 
 ## Examine your results
 
