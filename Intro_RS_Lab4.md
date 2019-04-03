@@ -70,40 +70,52 @@ Have a look around the scene and familiarise yourself with the landscape. You'll
 ![Figure 4. Create and collect the urban class](screenshots/l4_urban.png)
 
 
-5. Next you can configure the urban geometry import (cog-wheel, top of the script in imports section) as follows.  Click the cog-wheel icon to configure it, change 'Import as'  from 'Geometry' to 'FeatureCollection'.  Use 'Add property' landcover and set its value to 0.  (Subsequent classes will be 1, 2, etc.)  when finished, click 'OK'.
+5. Next you can configure the urban geometry import (cog-wheel, top of the script in imports section) as follows.  Click the cog-wheel icon to configure it, change 'Import as'  from 'Geometry' to 'FeatureCollection'.  Use 'Add property' landcover and set its value to 0.  (Subsequent classes will be 1, 2, 3 etc.)  when finished, click 'OK'.
 
 ![Figure 5. The geometry dialogue box](screenshots/l4_cog.png)
 
 
+6. Repeat step 5 for each land cover class in that you wish to include in your classification, ensuring that training points overlap the image.   Add 'water', 'forest', and 'agriculture' next - collecting 25 points for each. Use the cog-wheel to configure the geometries, changing the type to FeatureCollection and setting the property name to landcover with values of 1, 2 and 3 for the different classes.
 
+![Figure 6. Adding classes](screenshots/l4_classes.png)
 
-6. Repeat step 4 for each land cover class in the classification, ensuring that training points overlap the image.   An easy one is to get vegetation and water points next, for a total of three classes: {urban, vegetation, water}.
-7. Add the following line to merge the imports into a single FeatureCollection:
+7. Now we have four classes defined (urban, water, forest, agriculture), but before we can use them to collect training data we need to merge them into a single collection, called a FeatureCollection. Run the following line to merge the geometries into a single FeatureCollection:
 
 ```javascript
-var newfc = urban.merge(water).merge(vegetation);
+var classNames = urban.merge(water).merge(forest).merge(agriculture);
 ```
 
-Optional: print the feature collection and inspect the features.
+8. Print the feature collection and inspect the features.
+
+```javascript
+print(classNames)
+```
+![Figure 7. Printing classes](screenshots/l4_printclass.png)
 
 
 ## Create the training data
 
-Create training data by overlaying the training points on the image.  This will add new properties to the feature collection that represent image band values at each point:
+Now we can use the FeatureCollection we created to drill through the image and extract the reflectance data for each point, from every band. We create training data by overlaying the training points on the image.  This will add new properties to the feature collection that represent image band values at each point:
+
 ```javascript
 var bands = ['B2', 'B3', 'B4', 'B5', 'B6', 'B7'];
 var training = image.select(bands).sampleRegions({
-  collection: newfc,
+  collection: classNames,
   properties: ['landcover'],
   scale: 30
 });
+print(training);
 ```
 
-Optional: print the training data and inspect the features to ensure there is a class value and properties corresponding to image bands.
+After running the script the training data will be printed to the console. You will notice that the 'properties' information has now changed, and in addition to the landcover class, for each point there is now a corresponding reflectance value for each band of the image.
+
+![Figure 8. Printing training data](screenshots/l4_training.png)
+
+
 
 ## Train the classifier and run the classification
 
-First we need to train the classifier by providing examples of what different landcover class look like from a multi-spectral perspective.
+Now we can train the classifier algorithm by using our examples of what different landcover class look like from a multi-spectral perspective.
 
 ```javascript
 var classifier = ee.Classifier.cart().train({
@@ -113,32 +125,32 @@ var classifier = ee.Classifier.cart().train({
 });
 ```
 
-Then we can apply this knowledge to the rest of the image - using was was learnt from our training to inform decisions about which class other pixels should belong to.
+The next step is then to apply this knowledge from our training to the rest of the image - using was was learnt from our supervised collection to inform decisions about which class other pixels should belong to.
 
 ```javascript
 //Run the classification
 var classified = image.select(bands).classify(classifier);
 ```
 
-Display the results.  You may need to adjust  the colors, but if the training data have been created with urban=0, water=1 and vegetation=2, then the result will be rendered with those classes as yellow, blue and green, respectively.
+Display the results using the mapping function below. You may need to adjust  the colours, but if the training data have been created with urban=0, water=1, forest=2, and agriculture=3 - then the result will be rendered with those classes as yellow, blue and green, respectively.
+
 
 ```javascript
 //Display classification
-Map.centerObject(newfc, 11);
-Map.addLayer(image,
-{bands: ['B4', 'B3', 'B2'], min:0, max: 3000},
-'Landsat image');
+Map.centerObject(classNames, 11);
 Map.addLayer(classified,
-{min: 0, max: 2, palette: ['yellow', 'blue', 'green']},
+{min: 0, max: 3, palette: ['red', 'blue', 'green','yellow']},
 'classification');
-Map.addLayer(newfc);
 ```
 
 ## Examine your results
 
+Congratulations - your first landcover classification! But.....
 - Are you happy with the classification?
 - How could it be improved?
 - Try adding in some extra classes for landcover categories that show signs of confusion
+
+We will look at how to refine this and discuss limitations and avenues for improvement next week.
 
 -------
 ### Thank you
