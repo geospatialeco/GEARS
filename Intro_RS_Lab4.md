@@ -8,6 +8,7 @@ Lab 4 - Image Classification
 ### Acknowledgments
 - Google Earth Engine Team
 - Google Earth Engine Developers group
+- David Saah and Nicholas Clinton
 
 ------
 
