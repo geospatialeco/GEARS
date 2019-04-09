@@ -176,6 +176,14 @@ print(Chart2);
 ## Exercises
 
 - Try and run a supervised classification and plot spectra for a Sentinel-2 image, instead of a Landsat-8 one.
+- Experiment with clipping your maps to specific boundaries.
+
+Hint: you can use .clip(polygon) to clip a map of an image to the shape of a geometry called "polygon".
+
+```JavaScript
+Map.addLayer(image.clip(polygon), {bands: ['B4', 'B3', 'B2'],min:0, max: 3000}, 'True colour image');
+```
+
 
 -------
 ### Thank you
