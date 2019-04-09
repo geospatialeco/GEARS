@@ -101,7 +101,7 @@ We ended last week with a discussion on whether or not we were happy with this c
 
 A very useful step in any classification is understanding how separable the classes are based on there spectral response curves. We have explored this already bu clicking on individual pixels and looking at the reflectance bar-charts in the console. But how can we explore multiple pixels and classes at the same time? We need to summarise the information and plot it as a graph.
 
-To do this we need to create a chart variable and then print it to the console. We use the image.regions function to summarise by class region, and the ee.Reducer.mean() function to obtain the mean reflectance vale for each class for each band,
+To do this we need to create a chart variable and then print it to the console. We use the image.regions function to summarise by class region, and the ee.Reducer.mean() function to obtain the mean reflectance vale for each class for each band.
 
 ```JavaScript
 // Create the scatter chart
