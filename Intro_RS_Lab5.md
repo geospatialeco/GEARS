@@ -171,7 +171,7 @@ var Chart2 = ui.Chart.image.regions(
 // Display the chart.
 print(Chart2);
 ```
-![Figure 4. Chart 2](screenshots/ee-chart1.png)
+![Figure 4. Chart 2](screenshots/ee-chart11.png)
 
 ## Exercises
 
