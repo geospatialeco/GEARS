@@ -58,7 +58,7 @@ Map.addLayer(image, {bands: ['B4', 'B3', 'B2'],min:0, max: 3000}, 'True colour i
 var classNames = urban.merge(water).merge(forest).merge(agriculture);
 
 //Select bands to use
-var bands = ['B2', 'B3', 'B4', 'B5', 'B6', 'B7'];
+var bands = ['B1','B2', 'B3', 'B4', 'B5', 'B6', 'B7'];
 
 //Sample the reflectance values for each training point
 var training = image.select(bands).sampleRegions({
@@ -89,7 +89,59 @@ Map.addLayer(classified,
 -----
 ## Improving the Classification
 
-We ended last week with a discuss on whether or not we were happy with this classification. Even without any quantitative.
+We ended last week with a discussion on whether or not we were happy with this classification. Even without any quantitative data, it was clearly lacking in some regions. How can we improve it? There are a few option we can explore:
+
+1. Change the training sample size. We only sampled 25 pixels per class. This was a lot of clicking, but we could use polygons instead of points to sample more pixels for training.
+2. Change the sampling strategy. We collected an even number of points per class, but some landcover class cover much more area than others. We could experiment with a stratified sampling approach instead.
+3. Change the classifier. We used a CART classifier, we could try a different approach such as a support vector machine (SVM) or RandomForest approach.
+4. Change the bands. We could add ancillary information, such as elevation data, or a derived index such as NDVI to provide for information for class discrimination.
+5. Change the image. We used a winter scene from Landsat-8. We could try a summer scene, or switch to a Sentinel-2 image.
+
+## Plotting spectra for different landcover classes
+
+A very useful step in any classification is understanding how separable the classes are based on there spectral response curves. We have explored this already bu clicking on individual pixels and looking at the reflectance bar-charts in the console. But how can we explore multiple pixels and classes at the same time? We need to summarise the information and plot it as a graph.
+
+To do this we need to create a chart variable and then print it to the console. We use the image.regions function to summarise by class region, and the ee.Reducer.mean() function to obtain the mean reflectance vale for each class for each band,
+
+```JavaScript
+// Create the scatter chart
+var Chart1 = ui.Chart.image.regions(
+    bands, classNames, ee.Reducer.mean(), 10, 'landcover', wavelengths)
+        .setChartType('ScatterChart');
+print(Chart1);
+```
+
+```JavaScript
+// Define customization options.
+var plotOptions = {
+  title: 'Landsat-8  Surface reflectance spectra',
+  hAxis: {title: 'Wavelength (nanometers)'},
+  vAxis: {title: 'Reflectance'},
+  lineWidth: 1,
+  pointSize: 4,
+  series: {
+    0: {color: 'red'}, // urban
+    1: {color: 'blue'}, // water
+    2: {color: 'green'}, // forestry
+    3: {color: 'orange'}, // agriculture
+}};
+```
+
+```JavaScript
+// Define a list of Landsat-8 wavelengths for X-axis labels.
+var wavelengths = [443, 482, 562, 655, 865, 1609, 2201];
+```
+
+```Create the chart with more options
+// Create the chart and set options.
+var Chart2 = ui.Chart.image.regions(
+    bands, classNames, ee.Reducer.mean(), 10, 'landcover', wavelengths)
+        .setChartType('ScatterChart')
+        .setOptions(plotOptions);
+// Display the chart.
+print(Chart2);
+```
+
 
 
 -------
