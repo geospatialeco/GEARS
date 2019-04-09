@@ -175,7 +175,7 @@ print(Chart2);
 
 ## Exercises
 
-- Try and run a supervised classification and plot spectra for a Sentinel-2 image, instead of a Landsat-8 one
+- Try and run a supervised classification and plot spectra for a Sentinel-2 image, instead of a Landsat-8 one.
 
 -------
 ### Thank you
