@@ -41,7 +41,7 @@ The objective of this lab is to further your understanding of the image classifi
 
 Open you script from last week's lab. If you did not save it, repeat the steps from [Lab 4](https://github.com/geospatialeco/GEARS/blob/master/Intro_RS_Lab4.md) and be sure to save it this time.
 
-I have provided the full code below, but ember that you need to manually collect the training data and assign landcover properties.
+I have provided the full code below, but remember that you need to manually collect the training data and assign landcover properties.
 
 ```JavaScript
 //Filter image collection for time window, spatial location, and cloud cover
@@ -85,6 +85,9 @@ Map.addLayer(classified,
 ```
 
 ![Figure 1. Classified map](screenshots/l4_classified.png)
+
+-----
+## Improving the Classification
 
 We ended last week with a discuss on whether or not we were happy with this classification. Even without any quantitative.
 
