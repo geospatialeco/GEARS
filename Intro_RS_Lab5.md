@@ -111,7 +111,7 @@ var subset = image.select('B[1-7]')
 var samples = ee.FeatureCollection([Water,Forest,City]);
 ```
 
-Now we can create a chart variable and then print it to the console. We use the image.regions function to summarise by class region, and the ee.Reducer.mean() function to obtain the mean reflectance vale for each class for each band.
+Now we can create a chart variable and then print it to the console. We use the image.regions function to summarise by class region, and the ee.Reducer.mean() function to obtain the mean reflectance value for each class for each band.
 
 
 ```JavaScript
@@ -121,6 +121,8 @@ var Chart1 = ui.Chart.image.regions(
         .setChartType('ScatterChart');
 print(Chart1);
 ```
+
+We can improve the readability of our chart by specifying some display options.
 
 ```JavaScript
 // Define customization options.
@@ -136,6 +138,8 @@ var plotOptions = {
     2: {color: 'red'}, // City
 }};
 ```
+
+And we can print the actual band wavelengths on the x-axis using this:
 
 ```JavaScript
 // Define a list of Landsat-8 wavelengths for X-axis labels.
