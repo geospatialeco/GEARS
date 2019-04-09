@@ -136,7 +136,7 @@ var Chart1 = ui.Chart.image.regions(
 print(Chart1);
 ```
 
-![Figure 3. Chart 1](screenshots/ee-chart1.png)
+![Figure 3. Chart 1](screenshots/ee-chart2.png)
 
 We can improve the readability of our chart by specifying some display options.
 
@@ -171,7 +171,7 @@ var Chart2 = ui.Chart.image.regions(
 // Display the chart.
 print(Chart2);
 ```
-![Figure 4. Chart 2](screenshots/ee-chart2.png)
+![Figure 4. Chart 2](screenshots/ee-chart1.png)
 
 ## Exercises
 
