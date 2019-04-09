@@ -101,14 +101,14 @@ We ended last week with a discussion on whether or not we were happy with this c
 
 A very useful step in any classification is understanding how separable the classes are based on their spectral response curves. We have explored this already by clicking on individual pixels and looking at the reflectance bar-charts in the console. But how can we explore multiple pixels and classes at the same time? We need to summarise the information and plot it as a graph.
 
-First we will specify which bands to use, and create new polygons for each class we want to explore. Change the geometry type to Feature and and define a 'label' in the properties tab.
+First we will specify which bands to use, and create new polygons for three classes (Water, Forest, City) we want to explore. Change the geometry type to Feature and and define a 'label' in the properties tab.
 
 ![Figure 2. Defining Feature and Labels](screenshots/l5_feature.png)
 
 ```JavaScript
 //Choose bands to include and define feature collection to use
 var subset = image.select('B[1-7]')
-var samples = ee.FeatureCollection([class1,class2,class3,class4]);
+var samples = ee.FeatureCollection([Water,Forest,City]);
 ```
 
 Now we can create a chart variable and then print it to the console. We use the image.regions function to summarise by class region, and the ee.Reducer.mean() function to obtain the mean reflectance vale for each class for each band.
@@ -131,10 +131,9 @@ var plotOptions = {
   lineWidth: 1,
   pointSize: 4,
   series: {
-    0: {color: 'red'}, // urban
-    1: {color: 'blue'}, // water
-    2: {color: 'green'}, // forestry
-    3: {color: 'orange'}, // agriculture
+    0: {color: 'blue'}, // Water
+    1: {color: 'green'}, // Forest
+    2: {color: 'red'}, // City
 }};
 ```
 
@@ -153,7 +152,9 @@ var Chart2 = ui.Chart.image.regions(
 print(Chart2);
 ```
 
+## Exercises
 
+- Try and run a supervised classification and plot spectra for a Sentinel-2 image, instead of a Landsat-8 one
 
 -------
 ### Thank you
