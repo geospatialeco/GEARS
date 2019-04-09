@@ -131,7 +131,7 @@ Now we can create a chart variable and then print it to the console. We use the 
 ```JavaScript
 // Create the scatter chart
 var Chart1 = ui.Chart.image.regions(
-    subset, samples, ee.Reducer.mean(), 10, 'label', wavelengths)
+    subset, samples, ee.Reducer.mean(), 10, 'label')
         .setChartType('ScatterChart');
 print(Chart1);
 ```
