@@ -2,7 +2,7 @@
 GEARS - Geospatial Engineering and Remote Sensing lab - https://www.gears-lab.com
 
 # Introduction to Remote Sensing of the Environment
-Lab 4 - Image Classification
+Lab 4 - Image Classification - part 1
 --------------
 
 ### Acknowledgments
@@ -142,6 +142,8 @@ Map.addLayer(classified,
 {min: 0, max: 3, palette: ['red', 'blue', 'green','yellow']},
 'classification');
 ```
+
+
 
 ![Figure 9. Classified map](screenshots/l4_classified.png)
 

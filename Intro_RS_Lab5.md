@@ -2,7 +2,7 @@
 GEARS - Geospatial Engineering and Remote Sensing lab - https://www.gears-lab.com
 
 # Introduction to Remote Sensing of the Environment
-Lab 4 - Image Classification
+Lab 5 - Image Classification - part 2
 --------------
 
 ### Acknowledgments
@@ -23,10 +23,10 @@ https://code.earthengine.google.com
 
 This lab follows on from others in this series:
 
-[Lab 1](https://github.com/geospatialeco/GEARS/blob/master/Intro_RS_Lab1.md)
-[Lab 2](https://github.com/geospatialeco/GEARS/blob/master/Intro_RS_Lab2.md)
-[Lab 3](https://github.com/geospatialeco/GEARS/blob/master/Intro_RS_Lab3.md)
-[Lab 4](https://github.com/geospatialeco/GEARS/blob/master/Intro_RS_Lab4.md)
+[Lab 1](https://github.com/geospatialeco/GEARS/blob/master/Intro_RS_Lab1.md) -
+[Lab 2](https://github.com/geospatialeco/GEARS/blob/master/Intro_RS_Lab2.md) -
+[Lab 3](https://github.com/geospatialeco/GEARS/blob/master/Intro_RS_Lab3.md) -
+[Lab 4](https://github.com/geospatialeco/GEARS/blob/master/Intro_RS_Lab4.md) -
 
 ------------------------------------------------------------------------
 
@@ -82,6 +82,7 @@ Map.centerObject(classNames, 11);
 Map.addLayer(classified,
 {min: 0, max: 3, palette: ['red', 'blue', 'green','yellow']},
 'classification');
+```
 
 ![Figure 1. Classified map](screenshots/l4_classified.png)
 
