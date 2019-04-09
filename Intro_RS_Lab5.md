@@ -58,7 +58,7 @@ Map.addLayer(image, {bands: ['B4', 'B3', 'B2'],min:0, max: 3000}, 'True colour i
 var classNames = urban.merge(water).merge(forest).merge(agriculture);
 
 //Select bands to use
-var bands = ['B1','B2', 'B3', 'B4', 'B5', 'B6', 'B7'];
+var bands = ['B2', 'B3', 'B4', 'B5', 'B6', 'B7'];
 
 //Sample the reflectance values for each training point
 var training = image.select(bands).sampleRegions({
@@ -99,9 +99,20 @@ We ended last week with a discussion on whether or not we were happy with this c
 
 ## Plotting spectra for different landcover classes
 
-A very useful step in any classification is understanding how separable the classes are based on there spectral response curves. We have explored this already bu clicking on individual pixels and looking at the reflectance bar-charts in the console. But how can we explore multiple pixels and classes at the same time? We need to summarise the information and plot it as a graph.
+A very useful step in any classification is understanding how separable the classes are based on there spectral response curves. We have explored this already by clicking on individual pixels and looking at the reflectance bar-charts in the console. But how can we explore multiple pixels and classes at the same time? We need to summarise the information and plot it as a graph.
 
-To do this we need to create a chart variable and then print it to the console. We use the image.regions function to summarise by class region, and the ee.Reducer.mean() function to obtain the mean reflectance vale for each class for each band.
+First we will specify which bands to use, and create new polygons for each class we want to explore. Change the geometry type to Feature and gibe it a name in the properties tab,
+
+
+
+```JavaScript
+//Choose bands to include and define feature collection to use
+var subset = image.select('B[1-7]')
+var samples = ee.FeatureCollection([urban,water,forest,agriculture]);
+```
+
+Now we can create a chart variable and then print it to the console. We use the image.regions function to summarise by class region, and the ee.Reducer.mean() function to obtain the mean reflectance vale for each class for each band.
+
 
 ```JavaScript
 // Create the scatter chart
