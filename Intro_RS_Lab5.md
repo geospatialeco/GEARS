@@ -101,6 +101,20 @@ We ended last week with a discussion on whether or not we were happy with this c
 
 A very useful step in any classification is understanding how separable the classes are based on their spectral response curves. We have explored this already by clicking on individual pixels and looking at the reflectance bar-charts in the console. But how can we explore multiple pixels and classes at the same time? We need to summarise the information and plot it as a graph.
 
+Save your work and clear the script. Load up a Landsat-8 image for a roi of your choice (remember to position a point on the map and call it roi)
+
+```JavaScript
+//Filter image collection for time window, spatial location, and cloud cover
+var image = ee.Image(ee.ImageCollection('LANDSAT/LC08/C01/T1_SR')
+    .filterBounds(roi)
+    .filterDate('2016-05-01', '2016-06-30')
+    .sort('CLOUD_COVER')
+    .first());
+
+//Add true-clour composite to map
+Map.addLayer(image, {bands: ['B4', 'B3', 'B2'],min:0, max: 3000}, 'True colour image');
+```
+
 First we will specify which bands to use, and create new polygons for three classes (Water, Forest, City) we want to explore. Change the geometry type to Feature and and define a 'label' in the properties tab.
 
 ![Figure 2. Defining Feature and Labels](screenshots/l5_feature.png)
