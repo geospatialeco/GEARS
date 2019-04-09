@@ -99,16 +99,16 @@ We ended last week with a discussion on whether or not we were happy with this c
 
 ## Plotting spectra for different landcover classes
 
-A very useful step in any classification is understanding how separable the classes are based on there spectral response curves. We have explored this already by clicking on individual pixels and looking at the reflectance bar-charts in the console. But how can we explore multiple pixels and classes at the same time? We need to summarise the information and plot it as a graph.
+A very useful step in any classification is understanding how separable the classes are based on their spectral response curves. We have explored this already by clicking on individual pixels and looking at the reflectance bar-charts in the console. But how can we explore multiple pixels and classes at the same time? We need to summarise the information and plot it as a graph.
 
-First we will specify which bands to use, and create new polygons for each class we want to explore. Change the geometry type to Feature and gibe it a name in the properties tab,
+First we will specify which bands to use, and create new polygons for each class we want to explore. Change the geometry type to Feature and and define a 'label' in the properties tab.
 
-
+![Figure 2. Defining Feature and Labels](screenshots/l5_feature.png)
 
 ```JavaScript
 //Choose bands to include and define feature collection to use
 var subset = image.select('B[1-7]')
-var samples = ee.FeatureCollection([urban,water,forest,agriculture]);
+var samples = ee.FeatureCollection([class1,class2,class3,class4]);
 ```
 
 Now we can create a chart variable and then print it to the console. We use the image.regions function to summarise by class region, and the ee.Reducer.mean() function to obtain the mean reflectance vale for each class for each band.
@@ -117,7 +117,7 @@ Now we can create a chart variable and then print it to the console. We use the 
 ```JavaScript
 // Create the scatter chart
 var Chart1 = ui.Chart.image.regions(
-    bands, classNames, ee.Reducer.mean(), 10, 'landcover', wavelengths)
+    bands, classNames, ee.Reducer.mean(), 10, 'label', wavelengths)
         .setChartType('ScatterChart');
 print(Chart1);
 ```
@@ -146,7 +146,7 @@ var wavelengths = [443, 482, 562, 655, 865, 1609, 2201];
 ```Create the chart with more options
 // Create the chart and set options.
 var Chart2 = ui.Chart.image.regions(
-    bands, classNames, ee.Reducer.mean(), 10, 'landcover', wavelengths)
+    bands, classNames, ee.Reducer.mean(), 10, 'label', wavelengths)
         .setChartType('ScatterChart')
         .setOptions(plotOptions);
 // Display the chart.
