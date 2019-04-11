@@ -28,6 +28,7 @@ This lab follows on from others in this series:
 [Lab 3](https://github.com/geospatialeco/GEARS/blob/master/Intro_RS_Lab3.md) -
 [Lab 4](https://github.com/geospatialeco/GEARS/blob/master/Intro_RS_Lab4.md) -
 [Lab 5](https://github.com/geospatialeco/GEARS/blob/master/Intro_RS_Lab5.md)
+
 ------------------------------------------------------------------------
 
 ### Objective
