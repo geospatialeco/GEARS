@@ -104,7 +104,7 @@ var classified = image.select(bands).classify(classifier);
 Map.centerObject(classNames, 11);
 //Add the classification to the map view, specify colours for classes
 Map.addLayer(classified,
-{min: 0, max: 4, palette: ['blue', 'red', 'green','yellow']},
+{min: 0, max: 3, palette: ['blue', 'red', 'green','yellow']},
 'classification');
 ```
 
