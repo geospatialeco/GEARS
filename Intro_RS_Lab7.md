@@ -81,26 +81,32 @@ print(training);
 ```
 6. Train the classifier
 
+```JavaScript
 //Train classifier - e.g. cart, randomForest, svm
 var classifier = ee.Classifier.cart().train({
   features: training,
   classProperty: 'landcover',
   inputProperties: bands
 });
+```
 
 7. Classify the input image
 
+```JavaScript
 //Run the classification
 var classified = image.select(bands).classify(classifier);
+```
 
 8. Add the classified map to the map view
 
+```JavaScript
 //Centre the map on your training data coverage
 Map.centerObject(classNames, 11);
 //Add the classification to the map view, specify colours for classes
 Map.addLayer(classified,
 {min: 0, max: 4, palette: ['blue', 'red', 'green','yellow']},
 'classification');
+```
 
 ## Classification validation
 
