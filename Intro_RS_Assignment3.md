@@ -2,7 +2,7 @@
 GEARS - Geospatial Engineering and Remote Sensing lab - https://www.gears-lab.com
 
 # Introduction to Remote Sensing of the Environment
-Assessment Item 3 - Image classification
+Assessment Item 3 - Image classification and validation
 -----------------
 
 The skills required to complete this assessment have been covered in Labs 4-7, but some further exploration and independent research will be required on your part. Talk to your classmates and use the Discussion board if you get stuck.
