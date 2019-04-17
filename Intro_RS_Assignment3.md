@@ -30,6 +30,8 @@ You have been hired by the wine growers association of Western Australia to cond
 The classification should be based on a Sentinel-2 image collected on 2nd April 2018
 (COPERNICUS/S2/20180402T021341_20180402T022350_T50HLH)
 
+![Figure 1](screenshots/assign3.png)
+
 
 ### Assignment format
 
