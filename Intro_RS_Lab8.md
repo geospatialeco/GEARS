@@ -82,6 +82,7 @@ Map.addLayer(VV, {min: -18, max: -6}, 'VV');
 6. Now add the VH layer, and explore how it differs to VV.
 
 ```JavaScript
+//Add the VH layer
 var VH = collectionVH.median();
 Map.addLayer(VH, {min: -22, max: -6}, 'VH');
 ```
