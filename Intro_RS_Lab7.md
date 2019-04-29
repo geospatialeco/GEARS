@@ -36,7 +36,7 @@ This lab follows on from others in this series:
 ### Objective
 
 
-The objective of this lab is learn how to evaluate image classification results and conduct an accuracy assessment using independent validation data.
+The objective of this lab is to learn how to evaluate image classification results and conduct an accuracy assessment using independent validation data.
 
 ----------
 
