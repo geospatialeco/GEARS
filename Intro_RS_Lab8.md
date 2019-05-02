@@ -59,7 +59,6 @@ var collectionVV = ee.ImageCollection('COPERNICUS/S1_GRD')
 print(collectionVV);
 
 // Filter the collection for the VH product from the descending track
-
 var collectionVH = ee.ImageCollection('COPERNICUS/S1_GRD')
     .filter(ee.Filter.eq('instrumentMode', 'IW'))
     .filter(ee.Filter.listContains('transmitterReceiverPolarisation', 'VH'))
@@ -96,7 +95,7 @@ var VV2 = ee.Image(collectionVV.filterDate('2018-05-01', '2018-08-31').median())
 var VV3 = ee.Image(collectionVV.filterDate('2018-09-01', '2018-12-31').median());
 
 //Add to map
-Map.addLayer(VV1.addBands(VV2).addBands(VV3), {min: -16, max: -7}, 'Season composite');
+Map.addLayer(VV1.addBands(VV2).addBands(VV3), {min: -12, max: -7}, 'Season composite');
 ```
 9. Now try the same for VH, and try mixing VV and VH in a RGB composite
 10. Think about how this information differs to the optical data you have used so far, and how it could compliment it.
