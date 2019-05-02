@@ -86,6 +86,9 @@ print(collectionVH);
 Map.centerObject(roi, 13);
 ```
 
+![Figure 5. Center view](screenshots/l8_centre.png)
+
+
 6. Use the median reducer to obtain the median pixel value across the all years for each pixel.
 
 ```JavaScript
@@ -95,8 +98,11 @@ var VV = collectionVV.median();
 
 ```JavaScript
 // Adding the VV layer to the map
-Map.addLayer(VV, {min: -18, max: -6}, 'VV');
+Map.addLayer(VV, {min: -14, max: -7}, 'VV');
 ```
+
+![Figure 6. Mapping VV](screenshots/l8_VV.png)
+
 
 8. Explore the image and examine which landscape features have high backscatter intensity (white), and which low intensity (black).
 9. Now derive the the VH median layer, map it, and explore how it differs to VV.
@@ -104,7 +110,7 @@ Map.addLayer(VV, {min: -18, max: -6}, 'VV');
 ```JavaScript
 //Calculate the VH layer
 var VH = collectionVH.median();
-Map.addLayer(VH, {min: -22, max: -6}, 'VH');
+Map.addLayer(VH, {min: -14, max: -7}, 'VH');
 ```
 
 10. Next we will experiment with making an RGB composite from the SAR data. To do this we need to create three layers that we can place into the Red, Green, and Blue channels.
