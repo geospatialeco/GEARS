@@ -105,15 +105,21 @@ Map.addLayer(VV, {min: -14, max: -7}, 'VV');
 
 
 8. Explore the image and examine which landscape features have high backscatter intensity (white), and which have low intensity (black).
-9. Now derive the the VH median layer, map it, and explore how it differs to VV.
-
+9. Now derive the the VH median layer, and map it
 ```JavaScript
 //Calculate the VH layer and add it
 var VH = collectionVH.median();
 Map.addLayer(VH, {min: -20, max: -7}, 'VH');
 ```
 
-10. Next we will experiment with making an RGB composite from the SAR data. To do this we need to create three layers that we can place into the Red, Green, and Blue channels.
+![Figure 7. Mapping VH](screenshots/l8_VH.png)
+
+10. Explore how VV and VH differ in their sensitivity to different land surfaces
+
+![Figure 8. VV and VH difference](screenshots/l8_VV_VH.gif)
+
+
+11. Next we will experiment with making an RGB composite from the SAR data. To do this we need to create three layers that we can place into the Red, Green, and Blue channels.
 
 ```JavaScript
 // Create a 3 band stack by selecting from different periods (months)
@@ -124,8 +130,9 @@ var VV3 = ee.Image(collectionVV.filterDate('2018-09-01', '2018-12-31').median())
 //Add to map
 Map.addLayer(VV1.addBands(VV2).addBands(VV3), {min: -12, max: -7}, 'Season composite');
 ```
-11. Now try the same for VH, and try mixing VV and VH in a RGB composite
-12. Think about how this information differs to the optical data you have used so far, and how it could compliment it.
+12. Now try the same for VH
+13. Experiment with mixing VV and VH in a RGB composite
+14. Think about how this information differs to the optical data you have used so far, and how it could compliment it.
 -------
 
 ### Thank you
