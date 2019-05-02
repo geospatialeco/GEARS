@@ -104,13 +104,13 @@ Map.addLayer(VV, {min: -14, max: -7}, 'VV');
 ![Figure 6. Mapping VV](screenshots/l8_VV.png)
 
 
-8. Explore the image and examine which landscape features have high backscatter intensity (white), and which low intensity (black).
+8. Explore the image and examine which landscape features have high backscatter intensity (white), and which have low intensity (black).
 9. Now derive the the VH median layer, map it, and explore how it differs to VV.
 
 ```JavaScript
-//Calculate the VH layer
+//Calculate the VH layer and add it
 var VH = collectionVH.median();
-Map.addLayer(VH, {min: -14, max: -7}, 'VH');
+Map.addLayer(VH, {min: -20, max: -7}, 'VH');
 ```
 
 10. Next we will experiment with making an RGB composite from the SAR data. To do this we need to create three layers that we can place into the Red, Green, and Blue channels.
