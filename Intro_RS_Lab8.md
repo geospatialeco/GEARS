@@ -130,6 +130,9 @@ var VV3 = ee.Image(collectionVV.filterDate('2018-09-01', '2018-12-31').median())
 //Add to map
 Map.addLayer(VV1.addBands(VV2).addBands(VV3), {min: -12, max: -7}, 'Season composite');
 ```
+
+![Figure 9. Temporal RGB composite](screenshots/l8_rgb.png)
+
 12. Now try the same for VH
 13. Experiment with mixing VV and VH in a RGB composite
 14. Think about how this information differs to the optical data you have used so far, and how it could compliment it.
