@@ -116,9 +116,6 @@ Map.addLayer(VH, {min: -20, max: -7}, 'VH');
 
 10. Explore how VV and VH differ in their sensitivity to different land surfaces
 
-![Figure 8. VV and VH difference](screenshots/l8_VV_VH.gif)
-
-
 11. Next we will experiment with making an RGB composite from the SAR data. To do this we need to create three layers that we can place into the Red, Green, and Blue channels.
 
 ```JavaScript
