@@ -19,7 +19,7 @@ https://www.danielgm.net/cc/
 ### Background and objective
 
 
-The objective of this lab is to familiarise yourself with 3D point cloud data. We will sue data that we collected last week on campus in the Boab court.We colelcted multiple scans with a Leica BLK360 laser scanner, and we will work with some of these today.
+The objective of this lab is to familiarise yourself with 3D point cloud data. We will sue data that we collected last week on campus in the Boab court. We collected multiple scans with a Leica BLK360 laser scanner, and we will work with some of these today.
 
 ![Figure 1. Leica BLK360 scanning](screenshots/leica.png)
 
