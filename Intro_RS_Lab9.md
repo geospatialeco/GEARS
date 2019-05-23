@@ -76,6 +76,36 @@ Scan data can be downloaded in .las format here (please note that each file is ~
 
 ![Figure 10. CloudCompare](screenshots/cc_lost.png)
 
+13. So far we have been visualising the TLS data in RGB - that is the reflectance values recored by the camera are being given to each point. We see some issue with this in the tips of tree branches whereby the blue colour of the sky is given to the thin branches of the boab trees. This is partly due to the camera resolution being coarser than the laser resolution.
+
+14. Since the TLS is recording distance to objects in x,y and z coordinates, we can also visualise the cloud in terms of elevation. With the file selected in the top-left panel, click Edit>Colours>Height ramp from the main menu.
+
+![Figure 11. CloudCompare](screenshots/cc_heightramp.png)
+
+15. A new window will appear where you can apply a colour scale to the elevation data. Use the default options and click OK
+
+![Figure 12. CloudCompare](screenshots/cc_heightramp2.png)
+
+16. The point cloud will now be rendered with a default colour scale showing lower elevation points in blue and taller points in green.
+
+![Figure 13. CloudCompare](screenshots/cc_heightramp3.png)
+
+17. Zoom in a bit to see the effect in 3D.
+
+![Figure 14. CloudCompare](screenshots/cc_heightramp4.png)
+
+18. To create a more 3D textured look we can use a light shader. Using the main menu navigate to
+Display>Shaders & filters and turn on the E.D.L shader.
+
+![Figure 15. CloudCompare](screenshots/cc_shader.png)
+
+19. This results in a visualisation with more depth/texture.
+
+![Figure 15. CloudCompare](screenshots/cc_shader2.png)
+
+
+
+
 
 ### Updates still in progress......
 
