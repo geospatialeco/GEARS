@@ -64,9 +64,14 @@ Scan data can be downloaded in .las format here (please note that each file is ~
 
 9. As you can see, we are looking down on our scan from above - a bird's eye perspective. The green lawn is clearly visible, and the black dot in the location where the scanner was placed (the scanner does not scan directly beneath itself). See what other features you can identify - the boab trees, building, sun-shades etc.
 
-10. Although this aerial view is interesting, we currently have a 2D view. The reason we use LiDAR is for a 3D perspective - so use your LEFT mouse button to click and tilt the scene. your RIGHT mouse button will pan the image (up, down, left, right) and the SCROLL WHEEL is for zooming in and out.
+10. Although this aerial view is interesting, we currently have a 2D view. The reason we use LiDAR is for a 3D perspective - so use your LEFT mouse button to click and tilt the scene. Your RIGHT mouse button will pan the image (up, down, left, right) and the SCROLL WHEEL is for zooming in and out.
 
 ![Figure 9. CloudCompare](screenshots/cc_3d.png)
+
+11. The 3D navigation takes a while to get used to. Play around a bit to get the hang of it - and try navigate to the view shown below. You can see your fellow students waiting in the shade on the steps of the Mal Nairn Auditorium.
+
+![Figure 9. CloudCompare](screenshots/cc_mal.png)
+
 
 
 
