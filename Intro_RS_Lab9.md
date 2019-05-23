@@ -34,9 +34,13 @@ Scan data can be downloaded in .las format here (please note that each file is ~
 
 1. Launch the CloudCompare application.
 
-![Figure 1. CloudCompare](screenshots/cloudcompare.png)
+![Figure 2. CloudCompare](screenshots/cloudcompare.png)
 
-2.
+2. Note that your interface might look a bit different to mine if you are on a Windows machine - but don't worry the tools and menus are consistent across platforms.
+
+3. Open up the first scan by clicking File>Open, navigate to where you saved the data, and click on Boab_1.las
+
+![Figure 3. CloudCompare](screenshots/cc_open.png)
 
 
 
