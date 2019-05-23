@@ -104,7 +104,10 @@ Display>Shaders & filters and turn on the E.D.L shader.
 ![Figure 15. CloudCompare](screenshots/cc_shader2.png)
 
 
+## Merging multiple scans
 
+20. Close your current scans.
+21. Next we will load up two scans and go through how to merge them. For this exercise we will use Boab_1.las and Boab_3.las. Open both scans in CloudCompare.
 
 
 ### Updates still in progress......
