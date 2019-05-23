@@ -58,6 +58,11 @@ Scan data can be downloaded in .las format here (please note that each file is ~
 
 ![Figure 7. CloudCompare](screenshots/cc_gui.png)
 
+8. Let's zoom in a bit closer to see more detail. Hold your mouse over the main viewing window and use the scroll wheel to zoom in and out.
+
+![Figure 8. CloudCompare](screenshots/cc_zoom.png)
+
+
 
 ### Thank you
 
