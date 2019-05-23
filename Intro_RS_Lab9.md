@@ -42,15 +42,17 @@ Scan data can be downloaded in .las format here (please note that each file is ~
 
 ![Figure 3. CloudCompare](screenshots/cc_open.png)
 
-4. A window will appear asking if you would liek to apply a coordinate transformation - click Apply
+4. A window will appear asking if you would like to apply default settings - click Apply
 
-![Figure 3. CloudCompare](screenshots/cc_apply.png)
+![Figure 4. CloudCompare](screenshots/cc_apply.png)
 
-5. Another window will appear asking you 
+5. Another window will appear asking you about coordinate transformations - click Yes
 
-![Figure 3. CloudCompare](screenshots/cc_yes.png)
+![Figure 5. CloudCompare](screenshots/cc_yes.png)
 
-![Figure 3. CloudCompare](screenshots/cc_boab1.png)
+6. A progress bar should appear showing you how many points are being ingested (28 million in this case) and then the point cloud should appear in the main viewing window.
+
+![Figure 6. CloudCompare](screenshots/cc_boab1.png)
 
 
 
