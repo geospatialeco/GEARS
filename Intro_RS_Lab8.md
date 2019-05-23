@@ -37,7 +37,7 @@ This lab follows on from others in this series:
 ### Objective
 
 
-The objective of this lab is deepen your understanding of Synthetic Aperture Radar (SAR) data, and learn how to visualise different composites in Google Earth Engine.
+The objective of this lab is to deepen your understanding of Synthetic Aperture Radar (SAR) data, and learn how to visualise different composites in Google Earth Engine.
 
 ----------
 
