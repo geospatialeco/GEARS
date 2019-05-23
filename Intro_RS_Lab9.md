@@ -16,21 +16,27 @@ https://www.danielgm.net/cc/
 
 ------------------------------------------------------------------------
 
-### Objective
+### Background and objective
 
 
-The objective of this lab is to deepen your understanding of Synthetic Aperture Radar (SAR) data, and learn how to visualise different composites in Google Earth Engine.
+The objective of this lab is to familiarise yourself with 3D point cloud data. We will sue data that we collected last week on campus in the Boab court.We colelcted multiple scans with a Leica BLK360 laser scanner, and we will work with some of these today.
+
+![Figure 1. Leica BLK360 scanning](screenshots/leica.png)
+
+Scan data can be downloaded in .las format here (please note that each file is ~ 1GB):
+
+[Scan 1](https://www.dropbox.com/s/e172wfagzt50qfm/Boab_1.las?dl=0) | [Scan 2](https://www.dropbox.com/s/faa42pr89rdc7g6/Boab_2.las?dl=0) | [Scan 3](https://www.dropbox.com/s/pta1p7h50gta434/Boab_3.las?dl=0)
+
 
 ----------
 
-## getting to know CloudCompare
+## Getting to know CloudCompare
 
 1. Launch the CloudCompare application.
 
 ![Figure 1. CloudCompare](screenshots/cloudcompare.png)
 
-![Figure 2. Sentinel-1 information](screenshots/l8_sentinfo.png)
-
+2.
 
 
 
