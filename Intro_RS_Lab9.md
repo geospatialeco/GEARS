@@ -72,6 +72,9 @@ Scan data can be downloaded in .las format here (please note that each file is ~
 
 ![Figure 9. CloudCompare](screenshots/cc_mal.png)
 
+12. If at some stage you get lost in the scene, you can use the 1:1 button to return to an aerial view of the full spatial extent.
+
+![Figure 10. CloudCompare](screenshots/cc_lost.png)
 
 
 ### Updates still in progress......
