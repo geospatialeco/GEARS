@@ -42,6 +42,16 @@ Scan data can be downloaded in .las format here (please note that each file is ~
 
 ![Figure 3. CloudCompare](screenshots/cc_open.png)
 
+4. A window will appear asking if you would liek to apply a coordinate transformation - click Apply
+
+![Figure 3. CloudCompare](screenshots/cc_apply.png)
+
+5. Another window will appear asking you 
+
+![Figure 3. CloudCompare](screenshots/cc_yes.png)
+
+![Figure 3. CloudCompare](screenshots/cc_boab1.png)
+
 
 
 ### Thank you
