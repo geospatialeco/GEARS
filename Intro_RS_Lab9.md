@@ -54,6 +54,9 @@ Scan data can be downloaded in .las format here (please note that each file is ~
 
 ![Figure 6. CloudCompare](screenshots/cc_boab1.png)
 
+7. The top-left panel houses the file structure. Click on Bao_1.las and you will see some information appear in the panel below it, and the spatial extent of the file will be highlighted in the main window. In the properties panel (lower left) we can see that the current display options are set to RGB (the Leica BLK360 captures true-colour images in addition to laser data) and that there are 28,846,128 points in this cloud.
+
+![Figure 7. CloudCompare](screenshots/cc_gui.png)
 
 
 ### Thank you
