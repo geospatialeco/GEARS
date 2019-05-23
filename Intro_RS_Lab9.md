@@ -50,7 +50,7 @@ Scan data can be downloaded in .las format here (please note that each file is ~
 
 ![Figure 5. CloudCompare](screenshots/cc_yes.png)
 
-6. A progress bar should appear showing you how many points are being ingested (28 million in this case) and then the point cloud should appear in the main viewing window.
+6. A progress bar should appear showing you how many points are being ingested (28 million in this case) and then the point cloud should appear in the main viewing window as shown below.
 
 ![Figure 6. CloudCompare](screenshots/cc_boab1.png)
 
