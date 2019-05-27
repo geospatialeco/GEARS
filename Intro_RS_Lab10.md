@@ -56,7 +56,7 @@ Please see last week's lab here: [Lab 9](https://github.com/geospatialeco/GEARS/
 
 7. We will align these two scans using a combination of manual translation (rough positioning) and an automated computer algorithm called Iterative Closest Point (ICP) for fine tuning.
 
-8. Before starting with this, let us map both clouds according to an elevation colour scale (height ramp) - using the defaults scale for blue to green. be sure to select both clouds before applying the colour ramp.
+8. Before starting with this, let us map both clouds according to an elevation colour scale (height ramp) - using the default scale for blue to green. Be sure to select both clouds before applying the colour ramp.
 
 ![Figure 5. Two file colour ramp](screenshots/cc_dual_hr.png)
 
