@@ -31,7 +31,7 @@ Scan data can be downloaded in .las format here (please note that each file is ~
 
 ## Getting to know CloudCompare
 
-Please see last week's lab here: [Lab 9]
+Please see last week's lab here: [Lab 9](https://github.com/geospatialeco/GEARS/blob/master/Intro_RS_Lab9.md)
 
 ## Merging multiple point clouds
 
