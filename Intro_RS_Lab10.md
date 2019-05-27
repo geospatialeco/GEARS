@@ -88,7 +88,7 @@ Please see last week's lab here: [Lab 9](https://github.com/geospatialeco/GEARS/
 
 15. That looks much better, so now we can click the green tick to accept these changes to the orientation matrix of Boab_3.
 
-16. if we zoom in, we can now see the two separate scan locations, they are no longer on top of each other but are very nearly in the correct position.
+16. If we zoom in, we can now see the two separate scan locations, they are no longer on top of each other but are very nearly in the correct position.
 
 ![Figure 11. Translate](screenshots/cc_translated2.png)
 
