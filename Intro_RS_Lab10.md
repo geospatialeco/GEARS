@@ -68,10 +68,13 @@ Please see last week's lab here: [Lab 9](https://github.com/geospatialeco/GEARS/
 ![Figure 7. Translate](screenshots/cc_translate.png)
 
 
-10. You will see a new toolbar appear in the top-right corner of the main window, and small white text in the top-centre will remind you that the tool is active.
+10. You will see a new toolbar appear in the top-right corner of the main window, and small white text in the top-centre of the main window will remind you that the tool is active.
 
 ![Figure 7. Translate](screenshots/cc_translate2.png)
 
+11. Before going any further we will change the rotation axis from xyz to z only in the translation dialogue window. This will ensure that the point cloud can only be moved (left/right, up/down) or rotated around the z x-axis, preventing any unwanted tilting. 
+
+![Figure 7. Translate](screenshots/cc_translate3.png)
 
 
 ### Thank you
