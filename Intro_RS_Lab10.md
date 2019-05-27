@@ -78,9 +78,26 @@ Please see last week's lab here: [Lab 9](https://github.com/geospatialeco/GEARS/
 
 12. Now we can use the right-mouse click to drag the selected cloud (Boab_3) in any direction we like - in the screenshot below you will see I have shifted it over to the right.
 
-![Figure 7. Translate](screenshots/cc_translate4.png)
+![Figure 10. Translate](screenshots/cc_translate4.png)
 
-13. Now we can see the two scans clearly, and we can see that Boab_3 needs to be rotated clockwise to align better with Boab_1. Using the left mouse button click and drag the Boab_3 cloud to rotate it by about  
+13. Now we can see the two scans clearly, and we can see that Boab_3 needs to be rotated clockwise to align better with Boab_1. Using the left mouse button click and drag the Boab_3 cloud to rotate it by about 30 degrees in teh clockwise direction.
+
+![Figure 11. Translate](screenshots/cc_translate5.png)
+
+14. Now that the rotation looks better, we can use the right-mouse button to pull the whole cloud over to the left again and position it in better alignment with Boab_1.
+
+15. That looks much better, so now we can click the green tick to accept these changes to the orientation matrix of Boab_3.
+
+16. if we zoom in, we can now see the two separate scan locations, they are no longer on top of each other but are very nearly in the correct position.
+
+![Figure 11. Translate](screenshots/cc_translated2.png)
+
+17. However if we examine some straight lines for example, it is still clear that some minor offset is present.
+
+![Figure 12. Translate](screenshots/cc_translated.png)
+
+18. We will correct this in Part 3 using the ICP algorithm
+
 
 ### Thank you
 
