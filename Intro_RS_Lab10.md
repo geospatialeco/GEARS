@@ -68,6 +68,9 @@ Please see last week's lab here: [Lab 9](https://github.com/geospatialeco/GEARS/
 ![Figure 7. Translate](screenshots/cc_translate.png)
 
 
+10. You will see a new toolbar appear in the top-right corner of the main window, and small white text in the top-centre will remind you that the tool is active.
+
+![Figure 7. Translate](screenshots/cc_translate2.png)
 
 
 
