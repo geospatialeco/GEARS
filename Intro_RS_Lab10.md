@@ -42,6 +42,19 @@ Please see last week's lab here: [Lab 9](https://github.com/geospatialeco/GEARS/
 
 ![Figure 2. Opening two files](screenshots/cc_open2.png)
 
+3. Click "Apply to all" and "Yes to all" when the two dialogue boxes pop up.
+
+4. Once the two files have loaded, you will see that they are not correctly aligned.
+
+![Figure 3. Opening two files](screenshots/cc_overlap.png)
+
+5. In fact, if you zoom in closer (using the mouse wheel), you will see that they are positioned exactly on top of each other.
+
+![Figure 4. Opening two files](screenshots/cc_overlap_zoom.png)
+
+
+
+
 
 
 ### Thank you
