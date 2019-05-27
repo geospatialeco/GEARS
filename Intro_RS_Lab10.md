@@ -70,12 +70,17 @@ Please see last week's lab here: [Lab 9](https://github.com/geospatialeco/GEARS/
 
 10. You will see a new toolbar appear in the top-right corner of the main window, and small white text in the top-centre of the main window will remind you that the tool is active.
 
-![Figure 7. Translate](screenshots/cc_translate2.png)
+![Figure 8. Translate](screenshots/cc_translate2.png)
 
-11. Before going any further we will change the rotation axis from xyz to z only in the translation dialogue window. This will ensure that the point cloud can only be moved (left/right, up/down) or rotated around the z x-axis, preventing any unwanted tilting. 
+11. Before going any further we will change the rotation axis from xyz to z only in the translation dialogue window. This will ensure that the point cloud can only be moved (left/right, up/down) or rotated around the z x-axis, preventing any unwanted tilting.
 
-![Figure 7. Translate](screenshots/cc_translate3.png)
+![Figure 9. Translate](screenshots/cc_translate3.png)
 
+12. Now we can use the right-mouse click to drag the selected cloud (Boab_3) in any direction we like - in the screenshot below you will see I have shifted it over to the right.
+
+![Figure 7. Translate](screenshots/cc_translate4.png)
+
+13. Now we can see the two scans clearly, and we can see that Boab_3 needs to be rotated clockwise to align better with Boab_1. Using the left mouse button click and drag the Boab_3 cloud to rotate it by about  
 
 ### Thank you
 
