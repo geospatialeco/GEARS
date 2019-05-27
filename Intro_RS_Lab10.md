@@ -48,10 +48,24 @@ Please see last week's lab here: [Lab 9](https://github.com/geospatialeco/GEARS/
 
 ![Figure 3. Opening two files](screenshots/cc_overlap.png)
 
-5. In fact, if you zoom in closer (using the mouse wheel), you will see that they are positioned exactly on top of each other.
+5. In fact, if you zoom in closer (using the mouse wheel), you will see that they are positioned exactly on top of each other (even though they were collected ~ 10m apart).
 
 ![Figure 4. Opening two files](screenshots/cc_overlap_zoom.png)
 
+6. This issues occurs because the scans are in the scanners own coordinated system (SOC) and not in a geographic coordinate system (the BLK360 lacks a GPS). The origin of both scans is 0,0,0 (x,y,z) - every point is relative to the scanner itself.
+
+7. We will align these two scans using a combination of manual translation (rough positioning) and an automated computer algorithm called Iterative Closest Point (ICP) for fine tuning.
+
+8. Before starting with this, let us map both clouds according to an elevation colour scale (height ramp) - using the defaults scale for blue to green. be sure to select both clouds before applying the colour ramp.
+
+![Figure 5. Two file colour ramp](screenshots/cc_dual_hr.png)
+
+![Figure 6. Two file colour ramp](screenshots/cc_dual_hr2.png)
+
+
+9. Next select only the Boab_3.las file, and choose the "Translate" tool from either the main Menu or from the icon in the toolbar.
+
+![Figure 7. Translate](screenshots/cc_translate.png)
 
 
 
