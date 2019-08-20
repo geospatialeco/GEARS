@@ -1,5 +1,5 @@
 ![Shaun Levick](Logo3.png)
-GEARS - Geospatial Engineering and Remote Sensing lab - https://www.gears-lab.com
+GEARS - Geospatial Ecology and Remote Sensing lab - https://www.gears-lab.com
 
 # Introduction to Remote Sensing of the Environment
 Assessment Item 2 - Spectral properties and indices

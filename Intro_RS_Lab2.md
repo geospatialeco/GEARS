@@ -1,5 +1,5 @@
 ![Shaun Levick](Logo3.png)
-GEARS - Geospatial Engineering and Remote Sensing lab - https://www.gears-lab.com
+GEARS - Geospatial Ecology and Remote Sensing lab - https://www.gears-lab.com
 
 # Introduction to Remote Sensing of the Environment
 Lab 2 - Understanding band combinations and image visualisations
